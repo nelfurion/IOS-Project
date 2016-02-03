@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7F1A24351C62762700E096ED /* SMALL_0000_Capa-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */; };
+		7F1A24361C62762700E096ED /* SMALL_0001_Capa-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */; };
+		7F1A24371C62762700E096ED /* SMALL_0002_Capa-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */; };
+		7F1A24381C62762700E096ED /* SMALL_0003_Capa-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24341C62762700E096ED /* SMALL_0003_Capa-4.png */; };
 		7FDEF77A1C60D1A60030F4F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF7791C60D1A60030F4F3 /* main.m */; };
 		7FDEF77D1C60D1A60030F4F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF77C1C60D1A60030F4F3 /* AppDelegate.m */; };
-		7FDEF77F1C60D1A60030F4F3 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDEF77E1C60D1A60030F4F3 /* art.scnassets */; };
 		7FDEF7821C60D1A60030F4F3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF7811C60D1A60030F4F3 /* GameViewController.m */; };
 		7FDEF7851C60D1A60030F4F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDEF7831C60D1A60030F4F3 /* Main.storyboard */; };
 		7FDEF7871C60D1A60030F4F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7FDEF7861C60D1A60030F4F3 /* Assets.xcassets */; };
@@ -53,11 +56,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0000_Capa-1.png"; path = "Models/firefly/SMALL_0000_Capa-1.png"; sourceTree = "<group>"; };
+		7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0001_Capa-2.png"; path = "Models/firefly/SMALL_0001_Capa-2.png"; sourceTree = "<group>"; };
+		7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0002_Capa-3.png"; path = "Models/firefly/SMALL_0002_Capa-3.png"; sourceTree = "<group>"; };
+		7F1A24341C62762700E096ED /* SMALL_0003_Capa-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0003_Capa-4.png"; path = "Models/firefly/SMALL_0003_Capa-4.png"; sourceTree = "<group>"; };
 		7FDEF7751C60D1A60030F4F3 /* SoA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDEF7791C60D1A60030F4F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FDEF77B1C60D1A60030F4F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7FDEF77C1C60D1A60030F4F3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7FDEF77E1C60D1A60030F4F3 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
 		7FDEF7801C60D1A60030F4F3 /* GameViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameViewController.h; sourceTree = "<group>"; };
 		7FDEF7811C60D1A60030F4F3 /* GameViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GameViewController.m; sourceTree = "<group>"; };
 		7FDEF7841C60D1A60030F4F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -116,6 +122,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7F146C1E1C61365700B36060 /* firefly */ = {
+			isa = PBXGroup;
+			children = (
+				7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */,
+				7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */,
+				7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */,
+				7F1A24341C62762700E096ED /* SMALL_0003_Capa-4.png */,
+			);
+			name = firefly;
+			sourceTree = "<group>";
+		};
 		7FDEF76C1C60D1A50030F4F3 = {
 			isa = PBXGroup;
 			children = (
@@ -143,7 +160,6 @@
 				7FDEF7AD1C60D7E30030F4F3 /* LevelManager */,
 				7FDEF77B1C60D1A60030F4F3 /* AppDelegate.h */,
 				7FDEF77C1C60D1A60030F4F3 /* AppDelegate.m */,
-				7FDEF77E1C60D1A60030F4F3 /* art.scnassets */,
 				7FDEF7801C60D1A60030F4F3 /* GameViewController.h */,
 				7FDEF7811C60D1A60030F4F3 /* GameViewController.m */,
 				7FDEF7831C60D1A60030F4F3 /* Main.storyboard */,
@@ -217,6 +233,7 @@
 		7FDEF7D81C60F5230030F4F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7F146C1E1C61365700B36060 /* firefly */,
 				7FDEF7DB1C60F5950030F4F3 /* Hero */,
 			);
 			name = Models;
@@ -334,7 +351,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7FDEF7CD1C60EA550030F4F3 /* Draagu_Cave.png in Resources */,
-				7FDEF77F1C60D1A60030F4F3 /* art.scnassets in Resources */,
 				7FDEF78A1C60D1A60030F4F3 /* LaunchScreen.storyboard in Resources */,
 				7FDEF7D21C60EA550030F4F3 /* Skysin_Cave.png in Resources */,
 				7FDEF7CB1C60EA550030F4F3 /* Clockwork_Dungeon_e.png in Resources */,
@@ -342,12 +358,16 @@
 				7FDEF7D51C60EA550030F4F3 /* ZARAM_ENTRY.png in Resources */,
 				7FDEF7D31C60EA550030F4F3 /* Spirit_Forge.png in Resources */,
 				7FDEF7C91C60EA550030F4F3 /* Clockwork_Dungeon_c.png in Resources */,
+				7F1A24361C62762700E096ED /* SMALL_0001_Capa-2.png in Resources */,
 				7FDEF7D01C60EA550030F4F3 /* loc names setup.png in Resources */,
 				7FDEF7CE1C60EA550030F4F3 /* home_001.png in Resources */,
 				7FDEF7871C60D1A60030F4F3 /* Assets.xcassets in Resources */,
 				7FDEF7CA1C60EA550030F4F3 /* Clockwork_Dungeon_d.png in Resources */,
 				7FDEF7C81C60EA550030F4F3 /* Clockwork_Dungeon_b.png in Resources */,
+				7F1A24371C62762700E096ED /* SMALL_0002_Capa-3.png in Resources */,
+				7F1A24381C62762700E096ED /* SMALL_0003_Capa-4.png in Resources */,
 				7FDEF7CF1C60EA550030F4F3 /* Kaza Kavern.png in Resources */,
+				7F1A24351C62762700E096ED /* SMALL_0000_Capa-1.png in Resources */,
 				7FDEF7D41C60EA550030F4F3 /* spirit_well.png in Resources */,
 				7FDEF7D11C60EA550030F4F3 /* M KEY.bmp in Resources */,
 				7FDEF7851C60D1A60030F4F3 /* Main.storyboard in Resources */,
@@ -608,6 +628,7 @@
 				7FDEF7A61C60D1A60030F4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FDEF7A71C60D1A60030F4F3 /* Build configuration list for PBXNativeTarget "SoATests" */ = {
 			isa = XCConfigurationList;
@@ -616,6 +637,7 @@
 				7FDEF7A91C60D1A60030F4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7FDEF7AA1C60D1A60030F4F3 /* Build configuration list for PBXNativeTarget "SoAUITests" */ = {
 			isa = XCConfigurationList;
@@ -624,6 +646,7 @@
 				7FDEF7AC1C60D1A60030F4F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

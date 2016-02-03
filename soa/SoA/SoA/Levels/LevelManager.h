@@ -12,8 +12,6 @@
 
 @interface LevelManager : NSObject
 
-- initWithView:UIView;
-
 - (void) Load;
 
 - (void) Unload;
