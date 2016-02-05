@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
@@ -16,8 +17,57 @@
                     <view key="view" contentMode="scaleToFill" id="yX3-3i-nUh">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PPV-3K-TiI">
+                                <rect key="frame" x="295" y="79" width="240" height="128"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CUf-5w-icE">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-Dq-Vqh">
+                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                <subviews>
+                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-hJ-3nF">
+                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                                    </imageView>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38i-SL-mjh">
+                                <rect key="frame" x="301" y="327" width="33" height="30"/>
+                                <state key="normal" title="Take"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BV1-FR-VrT" eventType="touchUpInside" id="HGq-uE-3pr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anu-r9-I5Z">
+                                <rect key="frame" x="493" y="327" width="36" height="30"/>
+                                <state key="normal" title="Splat"/>
+                                <connections>
+                                    <action selector="choosePhotoFromGallery:" destination="BV1-FR-VrT" eventType="touchUpInside" id="DPA-4g-znx"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="PPV-3K-TiI" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leading" constant="295" id="4xu-9z-Xoo"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PPV-3K-TiI" secondAttribute="trailing" constant="45" id="7QF-EF-nVb"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="anu-r9-I5Z" secondAttribute="trailing" constant="51" id="Ndb-sb-SuU"/>
+                            <constraint firstItem="L50-1S-7IV" firstAttribute="top" secondItem="PPV-3K-TiI" secondAttribute="bottom" constant="393" id="QLx-10-I7R"/>
+                            <constraint firstItem="PPV-3K-TiI" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="59" id="aXH-7M-Naq"/>
+                            <constraint firstItem="L50-1S-7IV" firstAttribute="top" secondItem="38i-SL-mjh" secondAttribute="bottom" constant="243" id="gLb-nh-SHn"/>
+                            <constraint firstAttribute="trailing" secondItem="38i-SL-mjh" secondAttribute="trailing" constant="266" id="j2c-Bt-BLm"/>
+                            <constraint firstItem="anu-r9-I5Z" firstAttribute="baseline" secondItem="38i-SL-mjh" secondAttribute="baseline" id="oV4-lV-Lm1"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="choosePhotoBtn" destination="anu-r9-I5Z" id="8yI-oL-WOy"/>
+                        <outlet property="imageView" destination="LxW-hJ-3nF" id="gL7-II-VIf"/>
+                        <outlet property="takePhotoBtn" destination="38i-SL-mjh" id="NGH-M5-s3T"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>

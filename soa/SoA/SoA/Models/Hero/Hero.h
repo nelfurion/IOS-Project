@@ -9,12 +9,20 @@
 #ifndef Hero_h
 #define Hero_h
 
-@interface Hero : NSObject
+#import "../Contracts/Animatable.h"
 
-@property (strong, nonatomic) NSInteger strength;
-@property (strong, nonatomic) NSInteger agility;
-@property (strong, nonatomic) NSInteger stamina;
+@interface Hero : NSObject<Animatable>
 
+@property (nonatomic) NSInteger strength;
+@property (nonatomic) NSInteger agility;
+@property (nonatomic) NSInteger stamina;
+@property (nonatomic) NSInteger positionX;
+@property (nonatomic) NSInteger positionY;
+@property (nonatomic) NSInteger width;
+@property (nonatomic) NSInteger height;
+
+- (id) init;
++ (id) heroWithDefaultStats;
 
 @end
 
