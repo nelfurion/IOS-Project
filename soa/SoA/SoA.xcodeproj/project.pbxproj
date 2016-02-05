@@ -10,11 +10,9 @@
 		7F013E641C64682400557B70 /* saddness.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F013E631C64682400557B70 /* saddness.bundle */; };
 		7F0522541C647DC900D46EE5 /* CameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0522531C647DC900D46EE5 /* CameraManager.m */; };
 		7F0522561C648AB500D46EE5 /* Hero.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0522551C648AB500D46EE5 /* Hero.png */; };
-		7F1A24351C62762700E096ED /* SMALL_0000_Capa-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */; };
-		7F1A24361C62762700E096ED /* SMALL_0001_Capa-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */; };
-		7F1A24371C62762700E096ED /* SMALL_0002_Capa-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */; };
-		7F1A24381C62762700E096ED /* SMALL_0003_Capa-4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24341C62762700E096ED /* SMALL_0003_Capa-4.png */; };
 		7F1A243D1C62B91000E096ED /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A243C1C62B91000E096ED /* Hero.m */; };
+		7F2F0F291C64EF59008B4078 /* menu_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F2F0F281C64EF59008B4078 /* menu_background.jpg */; };
+		7F2F0F2C1C64F0A4008B4078 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F0F2B1C64F0A4008B4078 /* Engine.m */; };
 		7F5C33691C64386900875C83 /* SoundEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C33681C64386900875C83 /* SoundEngine.m */; };
 		7F5C33701C644EDD00875C83 /* duration.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336B1C644EDD00875C83 /* duration.wav */; };
 		7F5C33711C644EDD00875C83 /* mono16bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336C1C644EDD00875C83 /* mono16bit.wav */; };
@@ -71,12 +69,11 @@
 		7F0522521C647D9A00D46EE5 /* CameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraManager.h; path = Apis/Camera/CameraManager.h; sourceTree = "<group>"; };
 		7F0522531C647DC900D46EE5 /* CameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraManager.m; path = Apis/Camera/CameraManager.m; sourceTree = "<group>"; };
 		7F0522551C648AB500D46EE5 /* Hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hero.png; sourceTree = "<group>"; };
-		7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0000_Capa-1.png"; path = "Models/firefly/SMALL_0000_Capa-1.png"; sourceTree = "<group>"; };
-		7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0001_Capa-2.png"; path = "Models/firefly/SMALL_0001_Capa-2.png"; sourceTree = "<group>"; };
-		7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0002_Capa-3.png"; path = "Models/firefly/SMALL_0002_Capa-3.png"; sourceTree = "<group>"; };
-		7F1A24341C62762700E096ED /* SMALL_0003_Capa-4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0003_Capa-4.png"; path = "Models/firefly/SMALL_0003_Capa-4.png"; sourceTree = "<group>"; };
 		7F1A243A1C62AE0800E096ED /* Animatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Animatable.h; path = Models/Contracts/Animatable.h; sourceTree = "<group>"; };
 		7F1A243C1C62B91000E096ED /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero.m; path = Models/Hero/Hero.m; sourceTree = "<group>"; };
+		7F2F0F281C64EF59008B4078 /* menu_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = menu_background.jpg; sourceTree = "<group>"; };
+		7F2F0F2B1C64F0A4008B4078 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Engine.m; path = Engine/Engine.m; sourceTree = "<group>"; };
+		7F2F0F2D1C64F0B4008B4078 /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = Engine/Engine.h; sourceTree = "<group>"; };
 		7F5C33671C64384300875C83 /* SoundEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundEngine.h; sourceTree = "<group>"; };
 		7F5C33681C64386900875C83 /* SoundEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEngine.m; sourceTree = "<group>"; };
 		7F5C336B1C644EDD00875C83 /* duration.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = duration.wav; path = ../Resources/duration.wav; sourceTree = "<group>"; };
@@ -151,6 +148,7 @@
 		7F0522501C647D6E00D46EE5 /* Apis */ = {
 			isa = PBXGroup;
 			children = (
+				7F5C33661C64382900875C83 /* Media */,
 				7F0522511C647D7800D46EE5 /* Camera */,
 			);
 			name = Apis;
@@ -165,23 +163,29 @@
 			name = Camera;
 			sourceTree = "<group>";
 		};
-		7F146C1E1C61365700B36060 /* firefly */ = {
-			isa = PBXGroup;
-			children = (
-				7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */,
-				7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */,
-				7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */,
-				7F1A24341C62762700E096ED /* SMALL_0003_Capa-4.png */,
-			);
-			name = firefly;
-			sourceTree = "<group>";
-		};
 		7F1A24391C62AAB400E096ED /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
 				7F1A243A1C62AE0800E096ED /* Animatable.h */,
 			);
 			name = Contracts;
+			sourceTree = "<group>";
+		};
+		7F2F0F271C64EF46008B4078 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				7F2F0F281C64EF59008B4078 /* menu_background.jpg */,
+			);
+			name = images;
+			sourceTree = "<group>";
+		};
+		7F2F0F2A1C64F086008B4078 /* Engine */ = {
+			isa = PBXGroup;
+			children = (
+				7F2F0F2B1C64F0A4008B4078 /* Engine.m */,
+				7F2F0F2D1C64F0B4008B4078 /* Engine.h */,
+			);
+			name = Engine;
 			sourceTree = "<group>";
 		};
 		7F5C33661C64382900875C83 /* Media */ = {
@@ -196,6 +200,7 @@
 		7F5C336A1C644EDD00875C83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F2F0F271C64EF46008B4078 /* images */,
 				7F5C336C1C644EDD00875C83 /* mono16bit.wav */,
 				7F5C336D1C644EDD00875C83 /* mono8bit.wav */,
 				7F5C336E1C644EDD00875C83 /* stereo16bit.wav */,
@@ -229,10 +234,10 @@
 		7FDEF7771C60D1A60030F4F3 /* SoA */ = {
 			isa = PBXGroup;
 			children = (
+				7F2F0F2A1C64F086008B4078 /* Engine */,
 				7F0522501C647D6E00D46EE5 /* Apis */,
 				7F013E631C64682400557B70 /* saddness.bundle */,
 				7F5C336B1C644EDD00875C83 /* duration.wav */,
-				7F5C33661C64382900875C83 /* Media */,
 				7FDEF7D81C60F5230030F4F3 /* Models */,
 				7FDEF7AD1C60D7E30030F4F3 /* LevelManager */,
 				7FDEF77B1C60D1A60030F4F3 /* AppDelegate.h */,
@@ -311,7 +316,6 @@
 			isa = PBXGroup;
 			children = (
 				7F1A24391C62AAB400E096ED /* Contracts */,
-				7F146C1E1C61365700B36060 /* firefly */,
 				7FDEF7DB1C60F5950030F4F3 /* Hero */,
 				7F619D5C1C6391A500985595 /* MCSpriteLayer.h */,
 				7F619D5D1C6391EB00985595 /* MCSpriteLayer.m */,
@@ -444,7 +448,6 @@
 				7FDEF7D51C60EA550030F4F3 /* ZARAM_ENTRY.png in Resources */,
 				7FDEF7D31C60EA550030F4F3 /* Spirit_Forge.png in Resources */,
 				7FDEF7C91C60EA550030F4F3 /* Clockwork_Dungeon_c.png in Resources */,
-				7F1A24361C62762700E096ED /* SMALL_0001_Capa-2.png in Resources */,
 				7FDEF7D01C60EA550030F4F3 /* loc names setup.png in Resources */,
 				7F013E641C64682400557B70 /* saddness.bundle in Resources */,
 				7FDEF7CE1C60EA550030F4F3 /* home_001.png in Resources */,
@@ -452,15 +455,13 @@
 				7FDEF7CA1C60EA550030F4F3 /* Clockwork_Dungeon_d.png in Resources */,
 				7FDEF7C81C60EA550030F4F3 /* Clockwork_Dungeon_b.png in Resources */,
 				7F5C33701C644EDD00875C83 /* duration.wav in Resources */,
-				7F1A24371C62762700E096ED /* SMALL_0002_Capa-3.png in Resources */,
 				7F5C33731C644EDD00875C83 /* stereo16bit.wav in Resources */,
-				7F1A24381C62762700E096ED /* SMALL_0003_Capa-4.png in Resources */,
 				7FDEF7CF1C60EA550030F4F3 /* Kaza Kavern.png in Resources */,
-				7F1A24351C62762700E096ED /* SMALL_0000_Capa-1.png in Resources */,
 				7F5C33711C644EDD00875C83 /* mono16bit.wav in Resources */,
 				7FDEF7D41C60EA550030F4F3 /* spirit_well.png in Resources */,
 				7FDEF7D11C60EA550030F4F3 /* M KEY.bmp in Resources */,
 				7F5C33741C644EDD00875C83 /* stereo8bit.wav in Resources */,
+				7F2F0F291C64EF59008B4078 /* menu_background.jpg in Resources */,
 				7F5C33721C644EDD00875C83 /* mono8bit.wav in Resources */,
 				7FDEF7851C60D1A60030F4F3 /* Main.storyboard in Resources */,
 				7F0522561C648AB500D46EE5 /* Hero.png in Resources */,
@@ -492,6 +493,7 @@
 			files = (
 				7F1A243D1C62B91000E096ED /* Hero.m in Sources */,
 				7FDEF77D1C60D1A60030F4F3 /* AppDelegate.m in Sources */,
+				7F2F0F2C1C64F0A4008B4078 /* Engine.m in Sources */,
 				7FDEF7821C60D1A60030F4F3 /* GameViewController.m in Sources */,
 				7FDEF7B51C60E6430030F4F3 /* LevelManager.m in Sources */,
 				7F619D5E1C6391EB00985595 /* MCSpriteLayer.m in Sources */,

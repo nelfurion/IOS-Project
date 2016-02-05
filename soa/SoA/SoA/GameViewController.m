@@ -26,9 +26,36 @@
     [manager choosePhotoFromGallery];
 }
 
+- (IBAction)startGame {
+    UIView *ground  = [[UIView alloc] initWithFrame:CGRectMake(0, 500, self.view.bounds.size.width, 100)];
+    ground.backgroundColor = [UIColor brownColor];
+    [self.view addSubview:ground];
+    
+    UIDynamicAnimator* _animator;
+    UIGravityBehavior* _gravity;
+    
+    _animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
+    _gravity = [[UIGravityBehavior alloc] initWithItems:@[ground]];
+    [_animator addBehavior:_gravity];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    NSString *menuBackgroundPath = [[NSBundle mainBundle] pathForResource:@"menu_background.jpg" ofType:nil];
+    
+    UIImage *background = [UIImage imageWithContentsOfFile:menuBackgroundPath];
+    
+    [self.backgroundImageView setImage:background];
+    
+    [self.view bringSubviewToFront:self.takePhotoBtn];
+    [self.view bringSubviewToFront:self.choosePhotoBtn];
+    
+    /*UIImage *scaledImage = [UIImage imageWithCGImage:[background CGImage]
+                                               scale:(background.scale * 2)
+                                         orientation:(background.imageOrientation)];
+    */
+    //self.view.backgroundColor = [UIColor colorWithPatternImage:scaledImage];
     
     if (![UIImagePickerController isSourceTypeAvailable:UIImagePickerControllerSourceTypeCamera]) {
         
@@ -47,6 +74,10 @@
     [engine initOpenAL];
     [engine playAudioFile];
     NSLog(@"sound supposedly played");
+    
+    Hero *hero = [Hero heroWithDefaultStats];
+    CALayer *layer = [hero Animate];
+    [self.view.layer addSublayer:layer];
     
     
     UIView *myBox  = [[UIView alloc] initWithFrame:CGRectMake(180, 35, 100, 100)];

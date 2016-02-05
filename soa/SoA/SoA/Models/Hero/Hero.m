@@ -11,6 +11,10 @@
 #import <UIKit/UIKit.h>
 #import "MCSpriteLayer.h"
 
+static NSInteger const heroInitialSecondaryStatValue = 10;
+static NSInteger const HeroHealthPerLevel = 50;
+static NSInteger const HeroAttackPowerPerLevel = 2;
+static NSInteger const HeroInitialAttackPower = 10;
 static NSString *const HeroClassName = @"Hero";
 
 @implementation Hero
@@ -30,7 +34,7 @@ static NSString *const HeroClassName = @"Hero";
                                        size.width/CGImageGetWidth(img),
                                        size.height/CGImageGetHeight(img));
     
-    layer.bounds = CGRectMake(0, 0, CGImageGetWidth(img), CGImageGetHeight(img));
+    layer.bounds = CGRectMake(100, 100, 80, 140);
     layer.contentsRect = CGRectMake( 0, 0, normalizedSize.width, normalizedSize.height );
     
     CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"sampleIndex"];
@@ -44,45 +48,21 @@ static NSString *const HeroClassName = @"Hero";
     
     [layer addAnimation:animation forKey:nil]; // start
     return layer;
-    /*NSMutableArray *imageNames = [[NSMutableArray alloc] initWithCapacity:self.framesCount];
-    
-    // Load images
-    for (NSInteger i = 0; i < self.framesCount; i++) {
-        NSString *str = [NSString stringWithFormat:@"%@%ld.png", HeroClassName, i + 1];
-        [imageNames addObject:str];
-    }
-    
-    for (NSInteger i = 0; i < self.framesCount; i++) {
-        NSString *name = [imageNames objectAtIndex:i];
-        [self.frames addObject:[UIImage imageNamed:name]];
-    }
-    
-    // Normal Animation
-    UIImageView *animationImageView =
-        [[UIImageView alloc] initWithFrame:CGRectMake(
-                                                      self.positionX,
-                                                      self.positionY,
-                                                      self.width,
-                                                      self.height)];
-    animationImageView.animationImages = self.frames;
-    animationImageView.animationDuration = 0.5;
-    
-    return animationImageView;*/
-    //[self.view addSubview:animationImageView];
-    //[animationImageView startAnimating];
 }
 
 - (id) init {
     if (self = [super init]) {
-        self.agility = 10;
-        self.strength = 10;
-        self.stamina = 10;
+        self.agility = heroInitialSecondaryStatValue;
+        self.strength = heroInitialSecondaryStatValue;
+        self.stamina = heroInitialSecondaryStatValue;
         self.positionX = 0;
         self.positionY = 0;
-        self.width = 50;
-        self.height = 100;
-        self.framesCount = 4;
+        self.width = 50; //TODO: depends on level
+        self.height = 100;  //TODO: depends on level
+        self.framesCount = 4;  //TODO: depends on hero
         self.level = 1;
+        self.health = HeroHealthPerLevel;
+        self.attackPower = HeroInitialAttackPower;
         self.frames = [[NSMutableArray alloc] init];
     }
     
@@ -91,6 +71,19 @@ static NSString *const HeroClassName = @"Hero";
 
 - (void) lvlUp {
     self.level += 1;
+    self.agility += 1;
+    self.strength += 1;
+    self.stamina += 1;
+    [self calculateVitals];
+}
+
+- (void) calculateVitals {
+    self.health = HeroHealthPerLevel * self.level + self.stamina + self.agility / 2;
+    self.attackPower = HeroHealthPerLevel * self.level + HeroInitialAttackPower + self.agility / 2;
+}
+
+- (void) attack {
+    
 }
 
 + (id) heroWithDefaultStats {

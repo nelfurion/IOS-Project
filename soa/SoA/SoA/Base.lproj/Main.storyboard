@@ -18,6 +18,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-fq-2Ga">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PPV-3K-TiI">
                                 <rect key="frame" x="295" y="79" width="240" height="128"/>
                                 <subviews>
@@ -50,20 +53,34 @@
                                     <action selector="choosePhotoFromGallery:" destination="BV1-FR-VrT" eventType="touchUpInside" id="DPA-4g-znx"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-pd-9nW">
+                                <rect key="frame" x="77" y="128" width="76" height="30"/>
+                                <state key="normal" title="Start game"/>
+                                <connections>
+                                    <action selector="startGame" destination="BV1-FR-VrT" eventType="touchUpInside" id="0RA-Eq-DmG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="PPV-3K-TiI" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leading" constant="295" id="4xu-9z-Xoo"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PPV-3K-TiI" secondAttribute="trailing" constant="45" id="7QF-EF-nVb"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="anu-r9-I5Z" secondAttribute="trailing" constant="51" id="Ndb-sb-SuU"/>
-                            <constraint firstItem="L50-1S-7IV" firstAttribute="top" secondItem="PPV-3K-TiI" secondAttribute="bottom" constant="393" id="QLx-10-I7R"/>
-                            <constraint firstItem="PPV-3K-TiI" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="59" id="aXH-7M-Naq"/>
-                            <constraint firstItem="L50-1S-7IV" firstAttribute="top" secondItem="38i-SL-mjh" secondAttribute="bottom" constant="243" id="gLb-nh-SHn"/>
-                            <constraint firstAttribute="trailing" secondItem="38i-SL-mjh" secondAttribute="trailing" constant="266" id="j2c-Bt-BLm"/>
-                            <constraint firstItem="anu-r9-I5Z" firstAttribute="baseline" secondItem="38i-SL-mjh" secondAttribute="baseline" id="oV4-lV-Lm1"/>
+                            <constraint firstItem="Kha-fq-2Ga" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leading" id="4PN-um-SRJ"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="anu-r9-I5Z" secondAttribute="trailing" constant="51" id="L3h-Bm-ALA"/>
+                            <constraint firstItem="PPV-3K-TiI" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leading" constant="295" id="WRC-PX-p1L"/>
+                            <constraint firstItem="L50-1S-7IV" firstAttribute="top" secondItem="38i-SL-mjh" secondAttribute="bottom" constant="243" id="Wns-od-0wi"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PPV-3K-TiI" secondAttribute="trailing" constant="45" id="X3b-Nb-7b7"/>
+                            <constraint firstItem="wrA-pd-9nW" firstAttribute="centerY" secondItem="PPV-3K-TiI" secondAttribute="centerY" id="ZFR-Cl-MOA"/>
+                            <constraint firstItem="wrA-pd-9nW" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leadingMargin" constant="57" id="b8S-ct-dQ7"/>
+                            <constraint firstItem="Kha-fq-2Ga" firstAttribute="bottom" secondItem="L50-1S-7IV" secondAttribute="top" id="baO-Hw-9or"/>
+                            <constraint firstAttribute="trailing" secondItem="38i-SL-mjh" secondAttribute="trailing" constant="266" id="eW0-Pd-hUm"/>
+                            <constraint firstItem="wrA-pd-9nW" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="108" id="f3f-88-g1J"/>
+                            <constraint firstAttribute="trailing" secondItem="Kha-fq-2Ga" secondAttribute="trailing" id="fZO-6g-Ky7"/>
+                            <constraint firstItem="PPV-3K-TiI" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="59" id="mEU-YH-odt"/>
+                            <constraint firstItem="38i-SL-mjh" firstAttribute="baseline" secondItem="anu-r9-I5Z" secondAttribute="baseline" id="njP-d5-i5q"/>
+                            <constraint firstItem="Kha-fq-2Ga" firstAttribute="top" secondItem="yX3-3i-nUh" secondAttribute="top" id="tyO-Zu-yfW"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="backgroundImageView" destination="Kha-fq-2Ga" id="Exm-vz-olK"/>
                         <outlet property="choosePhotoBtn" destination="anu-r9-I5Z" id="8yI-oL-WOy"/>
                         <outlet property="imageView" destination="LxW-hJ-3nF" id="gL7-II-VIf"/>
                         <outlet property="takePhotoBtn" destination="38i-SL-mjh" id="NGH-M5-s3T"/>
@@ -71,6 +88,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="319" y="211"/>
         </scene>
     </scenes>
 </document>

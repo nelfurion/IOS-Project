@@ -14,4 +14,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
 
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+
+@property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @end

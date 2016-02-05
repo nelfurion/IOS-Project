@@ -22,9 +22,16 @@
 @property (nonatomic) NSInteger height;
 @property (nonatomic) NSInteger level;
 
+@property (nonatomic) NSInteger health;
+@property (nonatomic) NSInteger attackPower;
+
 - (id) init;
 
 - (void) lvlUp;
+
+- (void) attack;
+
+- (void) calculateVitals;
 
 + (id) heroWithDefaultStats;
 
