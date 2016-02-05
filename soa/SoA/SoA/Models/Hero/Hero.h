@@ -20,8 +20,12 @@
 @property (nonatomic) NSInteger positionY;
 @property (nonatomic) NSInteger width;
 @property (nonatomic) NSInteger height;
+@property (nonatomic) NSInteger level;
 
 - (id) init;
+
+- (void) lvlUp;
+
 + (id) heroWithDefaultStats;
 
 @end

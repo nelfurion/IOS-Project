@@ -46,6 +46,8 @@
     [engine bing];
     [engine initOpenAL];
     [engine playAudioFile];
+    NSLog(@"sound supposedly played");
+    
     
     UIView *myBox  = [[UIView alloc] initWithFrame:CGRectMake(180, 35, 100, 100)];
     myBox.backgroundColor = [UIColor purpleColor];

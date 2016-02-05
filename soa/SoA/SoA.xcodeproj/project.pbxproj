@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F013E641C64682400557B70 /* saddness.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F013E631C64682400557B70 /* saddness.bundle */; };
 		7F0522541C647DC900D46EE5 /* CameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0522531C647DC900D46EE5 /* CameraManager.m */; };
+		7F0522561C648AB500D46EE5 /* Hero.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0522551C648AB500D46EE5 /* Hero.png */; };
 		7F1A24351C62762700E096ED /* SMALL_0000_Capa-1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */; };
 		7F1A24361C62762700E096ED /* SMALL_0001_Capa-2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */; };
 		7F1A24371C62762700E096ED /* SMALL_0002_Capa-3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */; };
@@ -69,6 +70,7 @@
 		7F013E631C64682400557B70 /* saddness.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = saddness.bundle; sourceTree = "<group>"; };
 		7F0522521C647D9A00D46EE5 /* CameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraManager.h; path = Apis/Camera/CameraManager.h; sourceTree = "<group>"; };
 		7F0522531C647DC900D46EE5 /* CameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraManager.m; path = Apis/Camera/CameraManager.m; sourceTree = "<group>"; };
+		7F0522551C648AB500D46EE5 /* Hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hero.png; sourceTree = "<group>"; };
 		7F1A24311C62762700E096ED /* SMALL_0000_Capa-1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0000_Capa-1.png"; path = "Models/firefly/SMALL_0000_Capa-1.png"; sourceTree = "<group>"; };
 		7F1A24321C62762700E096ED /* SMALL_0001_Capa-2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0001_Capa-2.png"; path = "Models/firefly/SMALL_0001_Capa-2.png"; sourceTree = "<group>"; };
 		7F1A24331C62762700E096ED /* SMALL_0002_Capa-3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "SMALL_0002_Capa-3.png"; path = "Models/firefly/SMALL_0002_Capa-3.png"; sourceTree = "<group>"; };
@@ -197,6 +199,7 @@
 				7F5C336C1C644EDD00875C83 /* mono16bit.wav */,
 				7F5C336D1C644EDD00875C83 /* mono8bit.wav */,
 				7F5C336E1C644EDD00875C83 /* stereo16bit.wav */,
+				7F0522551C648AB500D46EE5 /* Hero.png */,
 				7F5C336F1C644EDD00875C83 /* stereo8bit.wav */,
 			);
 			path = Resources;
@@ -460,6 +463,7 @@
 				7F5C33741C644EDD00875C83 /* stereo8bit.wav in Resources */,
 				7F5C33721C644EDD00875C83 /* mono8bit.wav in Resources */,
 				7FDEF7851C60D1A60030F4F3 /* Main.storyboard in Resources */,
+				7F0522561C648AB500D46EE5 /* Hero.png in Resources */,
 				7FDEF7C61C60EA550030F4F3 /* A_World_10.png in Resources */,
 				7FDEF7C71C60EA550030F4F3 /* Chasm_Entry.png in Resources */,
 			);

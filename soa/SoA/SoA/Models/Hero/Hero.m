@@ -82,10 +82,15 @@ static NSString *const HeroClassName = @"Hero";
         self.width = 50;
         self.height = 100;
         self.framesCount = 4;
+        self.level = 1;
         self.frames = [[NSMutableArray alloc] init];
     }
     
     return self;
+}
+
+- (void) lvlUp {
+    self.level += 1;
 }
 
 + (id) heroWithDefaultStats {
