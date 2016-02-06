@@ -23,9 +23,6 @@
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker;
 
 - (id) initWithController: (UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate> *) controller;
-
-- (void) handleCameraNotSupported;
-
 @end
 
 #endif /* CameraManager_h */

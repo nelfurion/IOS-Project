@@ -19,51 +19,18 @@ static NSString *const HeroClassName = @"Hero";
 
 @implementation Hero
 
-@synthesize framesCount;
-@synthesize frames;
-
-- (CALayer*) Animate {
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"Hero.png" ofType:nil];
-    CGImageRef img = [UIImage imageWithContentsOfFile:path].CGImage;
-    
-    MCSpriteLayer *layer = [MCSpriteLayer layer];
-    layer.contents = (__bridge id)img;
-    
-    CGSize size = CGSizeMake( 160, 198 ); // size in pixels of one frame
-    CGSize normalizedSize = CGSizeMake(
-                                       size.width/CGImageGetWidth(img),
-                                       size.height/CGImageGetHeight(img));
-    
-    layer.bounds = CGRectMake(100, 100, 80, 140);
-    layer.contentsRect = CGRectMake( 0, 0, normalizedSize.width, normalizedSize.height );
-    
-    CABasicAnimation *animation = [CABasicAnimation animationWithKeyPath:@"sampleIndex"];
-    
-    animation.fromValue = [NSNumber numberWithInt:1]; // initial frame
-    animation.toValue = [NSNumber numberWithInt:6]; // last frame + 1
-    
-    animation.duration = 1.0f; // from the first frame to the 6th one in 1 second
-    animation.repeatCount = HUGE_VALF; // just keep repeating it
-    animation.autoreverses = YES; // do 1, 2, 3, 4, 5, 4, 3, 2
-    
-    [layer addAnimation:animation forKey:nil]; // start
-    return layer;
-}
-
-- (id) init {
+- (instancetype) init {
     if (self = [super init]) {
         self.agility = heroInitialSecondaryStatValue;
         self.strength = heroInitialSecondaryStatValue;
         self.stamina = heroInitialSecondaryStatValue;
-        self.positionX = 0;
-        self.positionY = 0;
-        self.width = 50; //TODO: depends on level
-        self.height = 100;  //TODO: depends on level
-        self.framesCount = 4;  //TODO: depends on hero
+        self.positionX = 0; //TODO: depends on level
+        self.positionY = 0; //TODO: depends on level
+        self.width = 50;
+        self.height = 100;
         self.level = 1;
         self.health = HeroHealthPerLevel;
         self.attackPower = HeroInitialAttackPower;
-        self.frames = [[NSMutableArray alloc] init];
     }
     
     return self;
@@ -79,15 +46,55 @@ static NSString *const HeroClassName = @"Hero";
 
 - (void) calculateVitals {
     self.health = HeroHealthPerLevel * self.level + self.stamina + self.agility / 2;
-    self.attackPower = HeroHealthPerLevel * self.level + HeroInitialAttackPower + self.agility / 2;
+    self.attackPower = HeroAttackPowerPerLevel * self.level + HeroInitialAttackPower + self.agility / 2;
 }
 
-- (void) attack {
+- (void) performActionWithFrames: (NSMutableArray*) frames {
+    [self.spriteNode runAction:[SKAction repeatActionForever:[SKAction animateWithTextures:frames
+                                                                               timePerFrame:0.1f
+                                                                                     resize:NO
+                                                                                    restore:YES]] withKey:@"heroAnimation"];
+}
+
+- (instancetype) initWithAnimationsData {
+    self = [self init];
+    self.idleFrames = [self createAnimationFrames: @"heroIdle"];
+    self.walkFrames = [self createAnimationFrames: @"heroWalk"];
+    self.attackFrames = [self createAnimationFrames: @"heroAttack"];
     
+    //Create hero sprite
+    SKTexture *temp = self.idleFrames[0];
+    self.spriteNode = [SKSpriteNode spriteNodeWithTexture:temp];
+    
+    [self.spriteNode setScale:0.3];
+    SKPhysicsBody *body = [SKPhysicsBody bodyWithTexture:self.idleFrames[0] size:self.spriteNode.size];
+    self.spriteNode.physicsBody = body;
+    
+    //[self stayIdle];
+    
+    return self;
 }
 
-+ (id) heroWithDefaultStats {
-    return [[Hero alloc] init];
+- (NSMutableArray*) createAnimationFrames: (NSString*) atlasName {
+    NSMutableArray* frames = [NSMutableArray array];
+    
+    //Load the TextureAtlas for the bear
+    SKTextureAtlas* atlas = [SKTextureAtlas atlasNamed:atlasName];
+    
+    
+    //Load the animation frames from the TextureAtlas
+    int numImages = atlas.textureNames.count;
+    for (int i=1; i <= numImages; i++) {
+        NSString *textureName = [NSString stringWithFormat:@"%@_%d", atlasName, i];
+        SKTexture *temp = [atlas textureNamed:textureName];
+        [frames addObject:temp];
+    }
+    
+    return frames;
+}
+
++ (instancetype) heroWithDefaultSettings {
+    return [[Hero alloc] initWithAnimationsData];
 }
 
 @end

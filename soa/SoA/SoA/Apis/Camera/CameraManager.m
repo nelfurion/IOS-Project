@@ -14,7 +14,7 @@
 @implementation CameraManager
 
 - (void) takePhoto {
-    [self handleCameraNotSupported];
+    //[self handleCameraNotSupported];
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self.uiViewController;
@@ -25,7 +25,7 @@
 }
 
 - (IBAction)choosePhotoFromGallery {
-    [self handleCameraNotSupported];
+    //[self handleCameraNotSupported];
     
     UIImagePickerController *picker = [[UIImagePickerController alloc] init];
     picker.delegate = self.uiViewController;
@@ -36,7 +36,7 @@
 }
 
 - (UIImage*)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    [self handleCameraNotSupported];
+    //[self handleCameraNotSupported];
     
     UIImage *chosenImage = info[UIImagePickerControllerEditedImage];
     [picker dismissViewControllerAnimated:YES completion:NULL];
@@ -46,7 +46,7 @@
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker {
-    [self handleCameraNotSupported];
+    //[self handleCameraNotSupported];
     
     [picker dismissViewControllerAnimated:YES completion:NULL];
     

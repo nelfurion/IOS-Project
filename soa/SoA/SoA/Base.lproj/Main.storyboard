@@ -21,62 +21,61 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Kha-fq-2Ga">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="PPV-3K-TiI">
-                                <rect key="frame" x="295" y="79" width="240" height="128"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="CUf-5w-icE">
-                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="bY4-Dq-Vqh">
-                                                <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-hJ-3nF">
-                                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                                    </imageView>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                            </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LxW-hJ-3nF">
+                                <rect key="frame" x="304" y="79" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="7zI-rC-HOK"/>
+                                </constraints>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="288" y="40" width="240" height="128"/>
+                                </variation>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="38i-SL-mjh">
-                                <rect key="frame" x="301" y="327" width="33" height="30"/>
+                                <rect key="frame" x="304" y="327" width="33" height="30"/>
                                 <state key="normal" title="Take"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="288" y="224" width="33" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="takePhoto:" destination="BV1-FR-VrT" eventType="touchUpInside" id="HGq-uE-3pr"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="anu-r9-I5Z">
-                                <rect key="frame" x="493" y="327" width="36" height="30"/>
+                                <rect key="frame" x="508" y="327" width="36" height="30"/>
                                 <state key="normal" title="Splat"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="492" y="224" width="36" height="30"/>
+                                </variation>
                                 <connections>
                                     <action selector="choosePhotoFromGallery:" destination="BV1-FR-VrT" eventType="touchUpInside" id="DPA-4g-znx"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wrA-pd-9nW">
-                                <rect key="frame" x="77" y="128" width="76" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VhJ-Bm-epZ">
+                                <rect key="frame" x="57" y="128" width="76" height="30"/>
                                 <state key="normal" title="Start game"/>
+                                <variation key="heightClass=compact" misplaced="YES">
+                                    <rect key="frame" x="66" y="89" width="76" height="30"/>
+                                </variation>
                                 <connections>
-                                    <action selector="startGame" destination="BV1-FR-VrT" eventType="touchUpInside" id="0RA-Eq-DmG"/>
+                                    <segue destination="bFj-Om-Kh3" kind="show" id="cko-bv-p6V"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="VhJ-Bm-epZ" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leadingMargin" constant="37" id="42I-Rs-KMY"/>
                             <constraint firstItem="Kha-fq-2Ga" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leading" id="4PN-um-SRJ"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="anu-r9-I5Z" secondAttribute="trailing" constant="51" id="L3h-Bm-ALA"/>
-                            <constraint firstItem="PPV-3K-TiI" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leading" constant="295" id="WRC-PX-p1L"/>
-                            <constraint firstItem="L50-1S-7IV" firstAttribute="top" secondItem="38i-SL-mjh" secondAttribute="bottom" constant="243" id="Wns-od-0wi"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="PPV-3K-TiI" secondAttribute="trailing" constant="45" id="X3b-Nb-7b7"/>
-                            <constraint firstItem="wrA-pd-9nW" firstAttribute="centerY" secondItem="PPV-3K-TiI" secondAttribute="centerY" id="ZFR-Cl-MOA"/>
-                            <constraint firstItem="wrA-pd-9nW" firstAttribute="leading" secondItem="yX3-3i-nUh" secondAttribute="leadingMargin" constant="57" id="b8S-ct-dQ7"/>
+                            <constraint firstItem="VhJ-Bm-epZ" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="108" id="C50-nw-fpv"/>
+                            <constraint firstItem="VhJ-Bm-epZ" firstAttribute="centerY" secondItem="LxW-hJ-3nF" secondAttribute="centerY" id="EPM-rS-QGE"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="LxW-hJ-3nF" secondAttribute="trailing" constant="36" id="G5D-pz-qYX"/>
+                            <constraint firstItem="38i-SL-mjh" firstAttribute="leading" secondItem="LxW-hJ-3nF" secondAttribute="leading" id="Gso-pY-M7n"/>
+                            <constraint firstItem="LxW-hJ-3nF" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="59" id="Q10-l5-G6z"/>
                             <constraint firstItem="Kha-fq-2Ga" firstAttribute="bottom" secondItem="L50-1S-7IV" secondAttribute="top" id="baO-Hw-9or"/>
-                            <constraint firstAttribute="trailing" secondItem="38i-SL-mjh" secondAttribute="trailing" constant="266" id="eW0-Pd-hUm"/>
-                            <constraint firstItem="wrA-pd-9nW" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="108" id="f3f-88-g1J"/>
                             <constraint firstAttribute="trailing" secondItem="Kha-fq-2Ga" secondAttribute="trailing" id="fZO-6g-Ky7"/>
-                            <constraint firstItem="PPV-3K-TiI" firstAttribute="top" secondItem="BiS-hD-0Mo" secondAttribute="bottom" constant="59" id="mEU-YH-odt"/>
-                            <constraint firstItem="38i-SL-mjh" firstAttribute="baseline" secondItem="anu-r9-I5Z" secondAttribute="baseline" id="njP-d5-i5q"/>
+                            <constraint firstItem="anu-r9-I5Z" firstAttribute="trailing" secondItem="LxW-hJ-3nF" secondAttribute="trailing" id="fgK-Ot-Gdw"/>
+                            <constraint firstItem="anu-r9-I5Z" firstAttribute="baseline" secondItem="38i-SL-mjh" secondAttribute="baseline" id="spP-qc-alD"/>
                             <constraint firstItem="Kha-fq-2Ga" firstAttribute="top" secondItem="yX3-3i-nUh" secondAttribute="top" id="tyO-Zu-yfW"/>
+                            <constraint firstItem="L50-1S-7IV" firstAttribute="top" secondItem="38i-SL-mjh" secondAttribute="bottom" constant="243" id="uLf-cs-uaK"/>
                         </constraints>
                     </view>
                     <connections>
@@ -87,8 +86,61 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="Ppc-yS-36n">
+                    <connections>
+                        <action selector="pan:" destination="BV1-FR-VrT" id="E54-xw-avL"/>
+                    </connections>
+                </panGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="Jzs-Cs-dFD">
+                    <connections>
+                        <action selector="swipe:" destination="BV1-FR-VrT" id="XbC-SZ-Hms"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="2CO-A8-ZGq">
+                    <connections>
+                        <action selector="screenEdgePan:" destination="BV1-FR-VrT" id="Q6E-fW-YWX"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <tapGestureRecognizer id="eBv-ZH-iOW">
+                    <connections>
+                        <action selector="tap:" destination="BV1-FR-VrT" id="p6b-BS-g4E"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="CaC-SC-7Ju">
+                    <connections>
+                        <action selector="longPress:" destination="BV1-FR-VrT" id="9M4-4X-woO"/>
+                    </connections>
+                </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="319" y="211"/>
+            <point key="canvasLocation" x="311" y="210"/>
+        </scene>
+        <!--Play View Controller-->
+        <scene sceneID="yij-C1-Rqw">
+            <objects>
+                <viewController title="Play View Controller" id="bFj-Om-Kh3" customClass="PlayViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Q6J-fE-sbF"/>
+                        <viewControllerLayoutGuide type="bottom" id="YDY-Lg-JF9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="5su-li-gIP" customClass="SKView">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dvx-dc-vzQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="fIy-9F-O1L">
+                    <connections>
+                        <action selector="swipe:" destination="bFj-Om-Kh3" id="EnY-OY-KyJ"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="CUq-N8-zrZ">
+                    <connections>
+                        <action selector="pan:" destination="bFj-Om-Kh3" id="koq-Ej-232"/>
+                    </connections>
+                </panGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1133" y="211"/>
         </scene>
     </scenes>
 </document>

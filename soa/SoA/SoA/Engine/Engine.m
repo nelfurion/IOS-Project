@@ -10,11 +10,15 @@
 
 #import "Engine.h"
 #import "../Models/Hero/Hero.h"
+#import <UIKit/UIKit.h>
+
+@class LevelManager;
 
 @implementation  Engine
 
 + (void) start {
-    Hero *hero = [Hero heroWithDefaultStats];
+    //Hero *hero = [Hero heroWithDefaultSettings];
+    //[LevelManager loadLevel:@"testLevel"];
 }
 
 @end

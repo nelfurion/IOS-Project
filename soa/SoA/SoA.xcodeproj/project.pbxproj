@@ -7,19 +7,32 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F013E641C64682400557B70 /* saddness.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 7F013E631C64682400557B70 /* saddness.bundle */; };
 		7F0522541C647DC900D46EE5 /* CameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0522531C647DC900D46EE5 /* CameraManager.m */; };
 		7F0522561C648AB500D46EE5 /* Hero.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0522551C648AB500D46EE5 /* Hero.png */; };
+		7F1855B31C66129900002168 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1855B21C66129900002168 /* PlayViewController.m */; };
+		7F1855B71C66146F00002168 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1855B61C66146F00002168 /* MyScene.m */; };
+		7F1855C61C661B9500002168 /* SoundEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1855C51C661B9500002168 /* SoundEngine.m */; };
+		7F1855CA1C666D4700002168 /* heroAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F1855C71C666D4700002168 /* heroAttack.atlas */; };
+		7F1855CB1C666D4700002168 /* heroIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F1855C81C666D4700002168 /* heroIdle.atlas */; };
+		7F1855CC1C666D4700002168 /* heroWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F1855C91C666D4700002168 /* heroWalk.atlas */; };
 		7F1A243D1C62B91000E096ED /* Hero.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1A243C1C62B91000E096ED /* Hero.m */; };
 		7F2F0F291C64EF59008B4078 /* menu_background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7F2F0F281C64EF59008B4078 /* menu_background.jpg */; };
 		7F2F0F2C1C64F0A4008B4078 /* Engine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F2F0F2B1C64F0A4008B4078 /* Engine.m */; };
-		7F5C33691C64386900875C83 /* SoundEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F5C33681C64386900875C83 /* SoundEngine.m */; };
+		7F2F0F341C650C52008B4078 /* testLevel.json in Resources */ = {isa = PBXBuildFile; fileRef = 7F2F0F331C650C52008B4078 /* testLevel.json */; };
+		7F2F0F3B1C653CEE008B4078 /* duration.caf in Resources */ = {isa = PBXBuildFile; fileRef = 7F2F0F3A1C653CEE008B4078 /* duration.caf */; };
+		7F536DF61C66833F004F5304 /* idle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F536DF51C66833F004F5304 /* idle.atlas */; };
+		7F536DFE1C668D0C004F5304 /* golemAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F536DFA1C668D0C004F5304 /* golemAttack.atlas */; };
+		7F536DFF1C668D0C004F5304 /* golemDie.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F536DFB1C668D0C004F5304 /* golemDie.atlas */; };
+		7F536E001C668D0C004F5304 /* golemIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F536DFC1C668D0C004F5304 /* golemIdle.atlas */; };
+		7F536E011C668D0C004F5304 /* golemWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F536DFD1C668D0C004F5304 /* golemWalk.atlas */; };
+		7F536E031C668D23004F5304 /* Golem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F536E021C668D23004F5304 /* Golem.m */; };
 		7F5C33701C644EDD00875C83 /* duration.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336B1C644EDD00875C83 /* duration.wav */; };
 		7F5C33711C644EDD00875C83 /* mono16bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336C1C644EDD00875C83 /* mono16bit.wav */; };
 		7F5C33721C644EDD00875C83 /* mono8bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336D1C644EDD00875C83 /* mono8bit.wav */; };
 		7F5C33731C644EDD00875C83 /* stereo16bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336E1C644EDD00875C83 /* stereo16bit.wav */; };
 		7F5C33741C644EDD00875C83 /* stereo8bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336F1C644EDD00875C83 /* stereo8bit.wav */; };
 		7F619D5E1C6391EB00985595 /* MCSpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F619D5D1C6391EB00985595 /* MCSpriteLayer.m */; };
+		7FA6024D1C6609AE00B955C1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA6024C1C6609AE00B955C1 /* SpriteKit.framework */; };
 		7FDEF77A1C60D1A60030F4F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF7791C60D1A60030F4F3 /* main.m */; };
 		7FDEF77D1C60D1A60030F4F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF77C1C60D1A60030F4F3 /* AppDelegate.m */; };
 		7FDEF7821C60D1A60030F4F3 /* GameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF7811C60D1A60030F4F3 /* GameViewController.m */; };
@@ -28,7 +41,6 @@
 		7FDEF78A1C60D1A60030F4F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7FDEF7881C60D1A60030F4F3 /* LaunchScreen.storyboard */; };
 		7FDEF7951C60D1A60030F4F3 /* SoATests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF7941C60D1A60030F4F3 /* SoATests.m */; };
 		7FDEF7A01C60D1A60030F4F3 /* SoAUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF79F1C60D1A60030F4F3 /* SoAUITests.m */; };
-		7FDEF7B51C60E6430030F4F3 /* LevelManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF7B41C60E6430030F4F3 /* LevelManager.m */; };
 		7FDEF7C61C60EA550030F4F3 /* A_World_10.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDEF7B61C60EA550030F4F3 /* A_World_10.png */; };
 		7FDEF7C71C60EA550030F4F3 /* Chasm_Entry.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDEF7B71C60EA550030F4F3 /* Chasm_Entry.png */; };
 		7FDEF7C81C60EA550030F4F3 /* Clockwork_Dungeon_b.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FDEF7B81C60EA550030F4F3 /* Clockwork_Dungeon_b.png */; };
@@ -65,24 +77,41 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		7F013E631C64682400557B70 /* saddness.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = saddness.bundle; sourceTree = "<group>"; };
 		7F0522521C647D9A00D46EE5 /* CameraManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CameraManager.h; path = Apis/Camera/CameraManager.h; sourceTree = "<group>"; };
 		7F0522531C647DC900D46EE5 /* CameraManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CameraManager.m; path = Apis/Camera/CameraManager.m; sourceTree = "<group>"; };
 		7F0522551C648AB500D46EE5 /* Hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hero.png; sourceTree = "<group>"; };
+		7F1855B11C66128C00002168 /* PlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
+		7F1855B21C66129900002168 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
+		7F1855B51C66144F00002168 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
+		7F1855B61C66146F00002168 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
+		7F1855C41C661B9500002168 /* SoundEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundEngine.h; path = Apis/Media/SoundEngine.h; sourceTree = "<group>"; };
+		7F1855C51C661B9500002168 /* SoundEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundEngine.m; path = Apis/Media/SoundEngine.m; sourceTree = "<group>"; };
+		7F1855C71C666D4700002168 /* heroAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = heroAttack.atlas; path = Models/Hero/heroAttack.atlas; sourceTree = "<group>"; };
+		7F1855C81C666D4700002168 /* heroIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = heroIdle.atlas; path = Models/Hero/heroIdle.atlas; sourceTree = "<group>"; };
+		7F1855C91C666D4700002168 /* heroWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = heroWalk.atlas; path = Models/Hero/heroWalk.atlas; sourceTree = "<group>"; };
 		7F1A243A1C62AE0800E096ED /* Animatable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Animatable.h; path = Models/Contracts/Animatable.h; sourceTree = "<group>"; };
 		7F1A243C1C62B91000E096ED /* Hero.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Hero.m; path = Models/Hero/Hero.m; sourceTree = "<group>"; };
 		7F2F0F281C64EF59008B4078 /* menu_background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = menu_background.jpg; sourceTree = "<group>"; };
 		7F2F0F2B1C64F0A4008B4078 /* Engine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Engine.m; path = Engine/Engine.m; sourceTree = "<group>"; };
 		7F2F0F2D1C64F0B4008B4078 /* Engine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Engine.h; path = Engine/Engine.h; sourceTree = "<group>"; };
-		7F5C33671C64384300875C83 /* SoundEngine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SoundEngine.h; sourceTree = "<group>"; };
-		7F5C33681C64386900875C83 /* SoundEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SoundEngine.m; sourceTree = "<group>"; };
-		7F5C336B1C644EDD00875C83 /* duration.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = duration.wav; path = ../Resources/duration.wav; sourceTree = "<group>"; };
+		7F2F0F301C64FE09008B4078 /* SoA-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SoA-Bridging-Header.h"; sourceTree = "<group>"; };
+		7F2F0F331C650C52008B4078 /* testLevel.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = testLevel.json; path = levels/testLevel.json; sourceTree = "<group>"; };
+		7F2F0F3A1C653CEE008B4078 /* duration.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = duration.caf; sourceTree = "<group>"; };
+		7F536DF51C66833F004F5304 /* idle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = idle.atlas; sourceTree = "<group>"; };
+		7F536DFA1C668D0C004F5304 /* golemAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = golemAttack.atlas; path = Models/Golem/golemAttack.atlas; sourceTree = "<group>"; };
+		7F536DFB1C668D0C004F5304 /* golemDie.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = golemDie.atlas; path = Models/Golem/golemDie.atlas; sourceTree = "<group>"; };
+		7F536DFC1C668D0C004F5304 /* golemIdle.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = golemIdle.atlas; path = Models/Golem/golemIdle.atlas; sourceTree = "<group>"; };
+		7F536DFD1C668D0C004F5304 /* golemWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = golemWalk.atlas; path = Models/Golem/golemWalk.atlas; sourceTree = "<group>"; };
+		7F536E021C668D23004F5304 /* Golem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Golem.m; path = Models/Golem/Golem.m; sourceTree = "<group>"; };
+		7F536E051C668D46004F5304 /* Golem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Golem.h; path = Models/Golem/Golem.h; sourceTree = "<group>"; };
+		7F5C336B1C644EDD00875C83 /* duration.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = duration.wav; sourceTree = "<group>"; };
 		7F5C336C1C644EDD00875C83 /* mono16bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mono16bit.wav; sourceTree = "<group>"; };
 		7F5C336D1C644EDD00875C83 /* mono8bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mono8bit.wav; sourceTree = "<group>"; };
 		7F5C336E1C644EDD00875C83 /* stereo16bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stereo16bit.wav; sourceTree = "<group>"; };
 		7F5C336F1C644EDD00875C83 /* stereo8bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stereo8bit.wav; sourceTree = "<group>"; };
 		7F619D5C1C6391A500985595 /* MCSpriteLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCSpriteLayer.h; sourceTree = "<group>"; };
 		7F619D5D1C6391EB00985595 /* MCSpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSpriteLayer.m; sourceTree = "<group>"; };
+		7FA6024C1C6609AE00B955C1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		7FDEF7751C60D1A60030F4F3 /* SoA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDEF7791C60D1A60030F4F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7FDEF77B1C60D1A60030F4F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,24 +128,22 @@
 		7FDEF79B1C60D1A60030F4F3 /* SoAUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SoAUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDEF79F1C60D1A60030F4F3 /* SoAUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SoAUITests.m; sourceTree = "<group>"; };
 		7FDEF7A11C60D1A60030F4F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7FDEF7B41C60E6430030F4F3 /* LevelManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LevelManager.m; path = Levels/LevelManager.m; sourceTree = "<group>"; };
-		7FDEF7B61C60EA550030F4F3 /* A_World_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = A_World_10.png; path = Levels/level/A_World_10.png; sourceTree = "<group>"; };
-		7FDEF7B71C60EA550030F4F3 /* Chasm_Entry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chasm_Entry.png; path = Levels/level/Chasm_Entry.png; sourceTree = "<group>"; };
-		7FDEF7B81C60EA550030F4F3 /* Clockwork_Dungeon_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_b.png; path = Levels/level/Clockwork_Dungeon_b.png; sourceTree = "<group>"; };
-		7FDEF7B91C60EA550030F4F3 /* Clockwork_Dungeon_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_c.png; path = Levels/level/Clockwork_Dungeon_c.png; sourceTree = "<group>"; };
-		7FDEF7BA1C60EA550030F4F3 /* Clockwork_Dungeon_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_d.png; path = Levels/level/Clockwork_Dungeon_d.png; sourceTree = "<group>"; };
-		7FDEF7BB1C60EA550030F4F3 /* Clockwork_Dungeon_e.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_e.png; path = Levels/level/Clockwork_Dungeon_e.png; sourceTree = "<group>"; };
-		7FDEF7BC1C60EA550030F4F3 /* Clockwork_Dungeon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon.png; path = Levels/level/Clockwork_Dungeon.png; sourceTree = "<group>"; };
-		7FDEF7BD1C60EA550030F4F3 /* Draagu_Cave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Draagu_Cave.png; path = Levels/level/Draagu_Cave.png; sourceTree = "<group>"; };
-		7FDEF7BE1C60EA550030F4F3 /* home_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_001.png; path = Levels/level/home_001.png; sourceTree = "<group>"; };
-		7FDEF7BF1C60EA550030F4F3 /* Kaza Kavern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kaza Kavern.png"; path = "Levels/level/Kaza Kavern.png"; sourceTree = "<group>"; };
-		7FDEF7C01C60EA550030F4F3 /* loc names setup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loc names setup.png"; path = "Levels/level/loc names setup.png"; sourceTree = "<group>"; };
-		7FDEF7C11C60EA550030F4F3 /* M KEY.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "M KEY.bmp"; path = "Levels/level/M KEY.bmp"; sourceTree = "<group>"; };
-		7FDEF7C21C60EA550030F4F3 /* Skysin_Cave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skysin_Cave.png; path = Levels/level/Skysin_Cave.png; sourceTree = "<group>"; };
-		7FDEF7C31C60EA550030F4F3 /* Spirit_Forge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spirit_Forge.png; path = Levels/level/Spirit_Forge.png; sourceTree = "<group>"; };
-		7FDEF7C41C60EA550030F4F3 /* spirit_well.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spirit_well.png; path = Levels/level/spirit_well.png; sourceTree = "<group>"; };
-		7FDEF7C51C60EA550030F4F3 /* ZARAM_ENTRY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ZARAM_ENTRY.png; path = Levels/level/ZARAM_ENTRY.png; sourceTree = "<group>"; };
-		7FDEF7D71C60EAFF0030F4F3 /* LevelManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = LevelManager.h; path = Levels/LevelManager.h; sourceTree = "<group>"; };
+		7FDEF7B61C60EA550030F4F3 /* A_World_10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = A_World_10.png; path = ../SoA/Levels/level/A_World_10.png; sourceTree = "<group>"; };
+		7FDEF7B71C60EA550030F4F3 /* Chasm_Entry.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Chasm_Entry.png; path = ../SoA/Levels/level/Chasm_Entry.png; sourceTree = "<group>"; };
+		7FDEF7B81C60EA550030F4F3 /* Clockwork_Dungeon_b.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_b.png; path = ../SoA/Levels/level/Clockwork_Dungeon_b.png; sourceTree = "<group>"; };
+		7FDEF7B91C60EA550030F4F3 /* Clockwork_Dungeon_c.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_c.png; path = ../SoA/Levels/level/Clockwork_Dungeon_c.png; sourceTree = "<group>"; };
+		7FDEF7BA1C60EA550030F4F3 /* Clockwork_Dungeon_d.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_d.png; path = ../SoA/Levels/level/Clockwork_Dungeon_d.png; sourceTree = "<group>"; };
+		7FDEF7BB1C60EA550030F4F3 /* Clockwork_Dungeon_e.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon_e.png; path = ../SoA/Levels/level/Clockwork_Dungeon_e.png; sourceTree = "<group>"; };
+		7FDEF7BC1C60EA550030F4F3 /* Clockwork_Dungeon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Clockwork_Dungeon.png; path = ../SoA/Levels/level/Clockwork_Dungeon.png; sourceTree = "<group>"; };
+		7FDEF7BD1C60EA550030F4F3 /* Draagu_Cave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Draagu_Cave.png; path = ../SoA/Levels/level/Draagu_Cave.png; sourceTree = "<group>"; };
+		7FDEF7BE1C60EA550030F4F3 /* home_001.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_001.png; path = ../SoA/Levels/level/home_001.png; sourceTree = "<group>"; };
+		7FDEF7BF1C60EA550030F4F3 /* Kaza Kavern.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Kaza Kavern.png"; path = "../SoA/Levels/level/Kaza Kavern.png"; sourceTree = "<group>"; };
+		7FDEF7C01C60EA550030F4F3 /* loc names setup.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "loc names setup.png"; path = "../SoA/Levels/level/loc names setup.png"; sourceTree = "<group>"; };
+		7FDEF7C11C60EA550030F4F3 /* M KEY.bmp */ = {isa = PBXFileReference; lastKnownFileType = image.bmp; name = "M KEY.bmp"; path = "../SoA/Levels/level/M KEY.bmp"; sourceTree = "<group>"; };
+		7FDEF7C21C60EA550030F4F3 /* Skysin_Cave.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Skysin_Cave.png; path = ../SoA/Levels/level/Skysin_Cave.png; sourceTree = "<group>"; };
+		7FDEF7C31C60EA550030F4F3 /* Spirit_Forge.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Spirit_Forge.png; path = ../SoA/Levels/level/Spirit_Forge.png; sourceTree = "<group>"; };
+		7FDEF7C41C60EA550030F4F3 /* spirit_well.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = spirit_well.png; path = ../SoA/Levels/level/spirit_well.png; sourceTree = "<group>"; };
+		7FDEF7C51C60EA550030F4F3 /* ZARAM_ENTRY.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = ZARAM_ENTRY.png; path = ../SoA/Levels/level/ZARAM_ENTRY.png; sourceTree = "<group>"; };
 		7FDEF7DA1C60F58E0030F4F3 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Hero.h; path = Models/Hero/Hero.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FA6024D1C6609AE00B955C1 /* SpriteKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +191,23 @@
 			name = Camera;
 			sourceTree = "<group>";
 		};
+		7F1855B41C66140400002168 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				7F1855B51C66144F00002168 /* MyScene.h */,
+				7F1855B61C66146F00002168 /* MyScene.m */,
+			);
+			name = Scenes;
+			sourceTree = "<group>";
+		};
+		7F1855BC1C66187A00002168 /* skeleton */ = {
+			isa = PBXGroup;
+			children = (
+				7F536DF51C66833F004F5304 /* idle.atlas */,
+			);
+			name = skeleton;
+			sourceTree = "<group>";
+		};
 		7F1A24391C62AAB400E096ED /* Contracts */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,11 +233,66 @@
 			name = Engine;
 			sourceTree = "<group>";
 		};
+		7F2F0F2E1C64FA72008B4078 /* levels */ = {
+			isa = PBXGroup;
+			children = (
+				7F2F0F331C650C52008B4078 /* testLevel.json */,
+			);
+			name = levels;
+			sourceTree = "<group>";
+		};
+		7F2F0F2F1C64FDB9008B4078 /* temp */ = {
+			isa = PBXGroup;
+			children = (
+				7FDEF7B61C60EA550030F4F3 /* A_World_10.png */,
+				7FDEF7B71C60EA550030F4F3 /* Chasm_Entry.png */,
+				7FDEF7B81C60EA550030F4F3 /* Clockwork_Dungeon_b.png */,
+				7FDEF7B91C60EA550030F4F3 /* Clockwork_Dungeon_c.png */,
+				7FDEF7BA1C60EA550030F4F3 /* Clockwork_Dungeon_d.png */,
+				7FDEF7BB1C60EA550030F4F3 /* Clockwork_Dungeon_e.png */,
+				7FDEF7BC1C60EA550030F4F3 /* Clockwork_Dungeon.png */,
+				7FDEF7BD1C60EA550030F4F3 /* Draagu_Cave.png */,
+				7FDEF7BE1C60EA550030F4F3 /* home_001.png */,
+				7FDEF7BF1C60EA550030F4F3 /* Kaza Kavern.png */,
+				7FDEF7C01C60EA550030F4F3 /* loc names setup.png */,
+				7FDEF7C11C60EA550030F4F3 /* M KEY.bmp */,
+				7FDEF7C21C60EA550030F4F3 /* Skysin_Cave.png */,
+				7FDEF7C31C60EA550030F4F3 /* Spirit_Forge.png */,
+				7FDEF7C41C60EA550030F4F3 /* spirit_well.png */,
+				7FDEF7C51C60EA550030F4F3 /* ZARAM_ENTRY.png */,
+			);
+			name = temp;
+			sourceTree = "<group>";
+		};
+		7F2F0F391C653CB0008B4078 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				7FDEF7801C60D1A60030F4F3 /* GameViewController.h */,
+				7FDEF7811C60D1A60030F4F3 /* GameViewController.m */,
+				7F1855B11C66128C00002168 /* PlayViewController.h */,
+				7F1855B21C66129900002168 /* PlayViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		7F536DF71C668C87004F5304 /* Golem */ = {
+			isa = PBXGroup;
+			children = (
+				7F536DFA1C668D0C004F5304 /* golemAttack.atlas */,
+				7F536DFB1C668D0C004F5304 /* golemDie.atlas */,
+				7F536DFC1C668D0C004F5304 /* golemIdle.atlas */,
+				7F536DFD1C668D0C004F5304 /* golemWalk.atlas */,
+				7F536E051C668D46004F5304 /* Golem.h */,
+				7F536E021C668D23004F5304 /* Golem.m */,
+			);
+			name = Golem;
+			sourceTree = "<group>";
+		};
 		7F5C33661C64382900875C83 /* Media */ = {
 			isa = PBXGroup;
 			children = (
-				7F5C33671C64384300875C83 /* SoundEngine.h */,
-				7F5C33681C64386900875C83 /* SoundEngine.m */,
+				7F1855C41C661B9500002168 /* SoundEngine.h */,
+				7F1855C51C661B9500002168 /* SoundEngine.m */,
 			);
 			name = Media;
 			sourceTree = "<group>";
@@ -200,10 +300,14 @@
 		7F5C336A1C644EDD00875C83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F2F0F2F1C64FDB9008B4078 /* temp */,
+				7F2F0F2E1C64FA72008B4078 /* levels */,
 				7F2F0F271C64EF46008B4078 /* images */,
 				7F5C336C1C644EDD00875C83 /* mono16bit.wav */,
+				7F2F0F3A1C653CEE008B4078 /* duration.caf */,
 				7F5C336D1C644EDD00875C83 /* mono8bit.wav */,
 				7F5C336E1C644EDD00875C83 /* stereo16bit.wav */,
+				7F5C336B1C644EDD00875C83 /* duration.wav */,
 				7F0522551C648AB500D46EE5 /* Hero.png */,
 				7F5C336F1C644EDD00875C83 /* stereo8bit.wav */,
 			);
@@ -213,6 +317,7 @@
 		7FDEF76C1C60D1A50030F4F3 = {
 			isa = PBXGroup;
 			children = (
+				7FA6024C1C6609AE00B955C1 /* SpriteKit.framework */,
 				7F5C336A1C644EDD00875C83 /* Resources */,
 				7FDEF7771C60D1A60030F4F3 /* SoA */,
 				7FDEF7931C60D1A60030F4F3 /* SoATests */,
@@ -234,16 +339,15 @@
 		7FDEF7771C60D1A60030F4F3 /* SoA */ = {
 			isa = PBXGroup;
 			children = (
+				7F1855BC1C66187A00002168 /* skeleton */,
+				7F1855B41C66140400002168 /* Scenes */,
+				7F2F0F391C653CB0008B4078 /* ViewControllers */,
 				7F2F0F2A1C64F086008B4078 /* Engine */,
 				7F0522501C647D6E00D46EE5 /* Apis */,
-				7F013E631C64682400557B70 /* saddness.bundle */,
-				7F5C336B1C644EDD00875C83 /* duration.wav */,
 				7FDEF7D81C60F5230030F4F3 /* Models */,
 				7FDEF7AD1C60D7E30030F4F3 /* LevelManager */,
 				7FDEF77B1C60D1A60030F4F3 /* AppDelegate.h */,
 				7FDEF77C1C60D1A60030F4F3 /* AppDelegate.m */,
-				7FDEF7801C60D1A60030F4F3 /* GameViewController.h */,
-				7FDEF7811C60D1A60030F4F3 /* GameViewController.m */,
 				7FDEF7831C60D1A60030F4F3 /* Main.storyboard */,
 				7FDEF7861C60D1A60030F4F3 /* Assets.xcassets */,
 				7FDEF7881C60D1A60030F4F3 /* LaunchScreen.storyboard */,
@@ -282,39 +386,15 @@
 		7FDEF7AD1C60D7E30030F4F3 /* LevelManager */ = {
 			isa = PBXGroup;
 			children = (
-				7FDEF7D61C60EA660030F4F3 /* levels */,
-				7FDEF7B41C60E6430030F4F3 /* LevelManager.m */,
-				7FDEF7D71C60EAFF0030F4F3 /* LevelManager.h */,
+				7F2F0F301C64FE09008B4078 /* SoA-Bridging-Header.h */,
 			);
 			name = LevelManager;
-			sourceTree = "<group>";
-		};
-		7FDEF7D61C60EA660030F4F3 /* levels */ = {
-			isa = PBXGroup;
-			children = (
-				7FDEF7B61C60EA550030F4F3 /* A_World_10.png */,
-				7FDEF7B71C60EA550030F4F3 /* Chasm_Entry.png */,
-				7FDEF7B81C60EA550030F4F3 /* Clockwork_Dungeon_b.png */,
-				7FDEF7B91C60EA550030F4F3 /* Clockwork_Dungeon_c.png */,
-				7FDEF7BA1C60EA550030F4F3 /* Clockwork_Dungeon_d.png */,
-				7FDEF7BB1C60EA550030F4F3 /* Clockwork_Dungeon_e.png */,
-				7FDEF7BC1C60EA550030F4F3 /* Clockwork_Dungeon.png */,
-				7FDEF7BD1C60EA550030F4F3 /* Draagu_Cave.png */,
-				7FDEF7BE1C60EA550030F4F3 /* home_001.png */,
-				7FDEF7BF1C60EA550030F4F3 /* Kaza Kavern.png */,
-				7FDEF7C01C60EA550030F4F3 /* loc names setup.png */,
-				7FDEF7C11C60EA550030F4F3 /* M KEY.bmp */,
-				7FDEF7C21C60EA550030F4F3 /* Skysin_Cave.png */,
-				7FDEF7C31C60EA550030F4F3 /* Spirit_Forge.png */,
-				7FDEF7C41C60EA550030F4F3 /* spirit_well.png */,
-				7FDEF7C51C60EA550030F4F3 /* ZARAM_ENTRY.png */,
-			);
-			name = levels;
 			sourceTree = "<group>";
 		};
 		7FDEF7D81C60F5230030F4F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7F536DF71C668C87004F5304 /* Golem */,
 				7F1A24391C62AAB400E096ED /* Contracts */,
 				7FDEF7DB1C60F5950030F4F3 /* Hero */,
 				7F619D5C1C6391A500985595 /* MCSpriteLayer.h */,
@@ -326,6 +406,9 @@
 		7FDEF7DB1C60F5950030F4F3 /* Hero */ = {
 			isa = PBXGroup;
 			children = (
+				7F1855C91C666D4700002168 /* heroWalk.atlas */,
+				7F1855C71C666D4700002168 /* heroAttack.atlas */,
+				7F1855C81C666D4700002168 /* heroIdle.atlas */,
 				7FDEF7DA1C60F58E0030F4F3 /* Hero.h */,
 				7F1A243C1C62B91000E096ED /* Hero.m */,
 			);
@@ -440,21 +523,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2F0F3B1C653CEE008B4078 /* duration.caf in Resources */,
 				7FDEF7CD1C60EA550030F4F3 /* Draagu_Cave.png in Resources */,
 				7FDEF78A1C60D1A60030F4F3 /* LaunchScreen.storyboard in Resources */,
+				7F1855CC1C666D4700002168 /* heroWalk.atlas in Resources */,
 				7FDEF7D21C60EA550030F4F3 /* Skysin_Cave.png in Resources */,
+				7F536E001C668D0C004F5304 /* golemIdle.atlas in Resources */,
+				7F536DFF1C668D0C004F5304 /* golemDie.atlas in Resources */,
 				7FDEF7CB1C60EA550030F4F3 /* Clockwork_Dungeon_e.png in Resources */,
 				7FDEF7CC1C60EA550030F4F3 /* Clockwork_Dungeon.png in Resources */,
 				7FDEF7D51C60EA550030F4F3 /* ZARAM_ENTRY.png in Resources */,
 				7FDEF7D31C60EA550030F4F3 /* Spirit_Forge.png in Resources */,
 				7FDEF7C91C60EA550030F4F3 /* Clockwork_Dungeon_c.png in Resources */,
 				7FDEF7D01C60EA550030F4F3 /* loc names setup.png in Resources */,
-				7F013E641C64682400557B70 /* saddness.bundle in Resources */,
+				7F536DF61C66833F004F5304 /* idle.atlas in Resources */,
 				7FDEF7CE1C60EA550030F4F3 /* home_001.png in Resources */,
 				7FDEF7871C60D1A60030F4F3 /* Assets.xcassets in Resources */,
+				7F536DFE1C668D0C004F5304 /* golemAttack.atlas in Resources */,
 				7FDEF7CA1C60EA550030F4F3 /* Clockwork_Dungeon_d.png in Resources */,
 				7FDEF7C81C60EA550030F4F3 /* Clockwork_Dungeon_b.png in Resources */,
+				7F1855CB1C666D4700002168 /* heroIdle.atlas in Resources */,
 				7F5C33701C644EDD00875C83 /* duration.wav in Resources */,
+				7F536E011C668D0C004F5304 /* golemWalk.atlas in Resources */,
 				7F5C33731C644EDD00875C83 /* stereo16bit.wav in Resources */,
 				7FDEF7CF1C60EA550030F4F3 /* Kaza Kavern.png in Resources */,
 				7F5C33711C644EDD00875C83 /* mono16bit.wav in Resources */,
@@ -462,10 +552,12 @@
 				7FDEF7D11C60EA550030F4F3 /* M KEY.bmp in Resources */,
 				7F5C33741C644EDD00875C83 /* stereo8bit.wav in Resources */,
 				7F2F0F291C64EF59008B4078 /* menu_background.jpg in Resources */,
+				7F1855CA1C666D4700002168 /* heroAttack.atlas in Resources */,
 				7F5C33721C644EDD00875C83 /* mono8bit.wav in Resources */,
 				7FDEF7851C60D1A60030F4F3 /* Main.storyboard in Resources */,
 				7F0522561C648AB500D46EE5 /* Hero.png in Resources */,
 				7FDEF7C61C60EA550030F4F3 /* A_World_10.png in Resources */,
+				7F2F0F341C650C52008B4078 /* testLevel.json in Resources */,
 				7FDEF7C71C60EA550030F4F3 /* Chasm_Entry.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,10 +587,12 @@
 				7FDEF77D1C60D1A60030F4F3 /* AppDelegate.m in Sources */,
 				7F2F0F2C1C64F0A4008B4078 /* Engine.m in Sources */,
 				7FDEF7821C60D1A60030F4F3 /* GameViewController.m in Sources */,
-				7FDEF7B51C60E6430030F4F3 /* LevelManager.m in Sources */,
 				7F619D5E1C6391EB00985595 /* MCSpriteLayer.m in Sources */,
-				7F5C33691C64386900875C83 /* SoundEngine.m in Sources */,
+				7F1855B71C66146F00002168 /* MyScene.m in Sources */,
 				7F0522541C647DC900D46EE5 /* CameraManager.m in Sources */,
+				7F536E031C668D23004F5304 /* Golem.m in Sources */,
+				7F1855C61C661B9500002168 /* SoundEngine.m in Sources */,
+				7F1855B31C66129900002168 /* PlayViewController.m in Sources */,
 				7FDEF77A1C60D1A60030F4F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -575,6 +669,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -594,6 +691,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -619,6 +717,9 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -631,6 +732,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -642,13 +744,21 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = SoA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = ../;
 				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = homework.SoA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
 				"SDKROOT[arch=*]" = iphoneos;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -658,11 +768,18 @@
 				ALWAYS_SEARCH_USER_PATHS = YES;
 				"ALWAYS_SEARCH_USER_PATHS[arch=*]" = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
+				ENABLE_BITCODE = YES;
 				INFOPLIST_FILE = SoA/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[arch=*]" = ../;
 				PRODUCT_BUNDLE_IDENTIFIER = homework.SoA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = YES;
+				SWIFT_INSTALL_OBJC_HEADER = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

@@ -10,8 +10,9 @@
 #define Hero_h
 
 #import "../Contracts/Animatable.h"
+#import <SpriteKit/SpriteKit.h>
 
-@interface Hero : NSObject<Animatable>
+@interface Hero : NSObject
 
 @property (nonatomic) NSInteger strength;
 @property (nonatomic) NSInteger agility;
@@ -25,15 +26,22 @@
 @property (nonatomic) NSInteger health;
 @property (nonatomic) NSInteger attackPower;
 
-- (id) init;
+@property (strong, nonatomic) NSMutableArray* idleFrames;
+@property (strong, nonatomic) NSMutableArray* walkFrames;
+@property (strong, nonatomic) NSMutableArray* attackFrames;
+@property (strong, nonatomic) SKSpriteNode* spriteNode;
+
+- (instancetype) init;
+
+- (instancetype) initWithAnimationsData;
 
 - (void) lvlUp;
 
-- (void) attack;
+- (void) performActionWithFrames: (NSMutableArray*) frames;
 
 - (void) calculateVitals;
 
-+ (id) heroWithDefaultStats;
++ (instancetype) heroWithDefaultSettings;
 
 @end
 
