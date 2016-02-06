@@ -26,6 +26,8 @@
 		7F536E001C668D0C004F5304 /* golemIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F536DFC1C668D0C004F5304 /* golemIdle.atlas */; };
 		7F536E011C668D0C004F5304 /* golemWalk.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F536DFD1C668D0C004F5304 /* golemWalk.atlas */; };
 		7F536E031C668D23004F5304 /* Golem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F536E021C668D23004F5304 /* Golem.m */; };
+		7F536E091C669A55004F5304 /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F536E081C669A55004F5304 /* MenuButton.m */; };
+		7F536E0B1C669E94004F5304 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F536E0A1C669E94004F5304 /* menuButton.png */; };
 		7F5C33701C644EDD00875C83 /* duration.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336B1C644EDD00875C83 /* duration.wav */; };
 		7F5C33711C644EDD00875C83 /* mono16bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336C1C644EDD00875C83 /* mono16bit.wav */; };
 		7F5C33721C644EDD00875C83 /* mono8bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336D1C644EDD00875C83 /* mono8bit.wav */; };
@@ -104,6 +106,9 @@
 		7F536DFD1C668D0C004F5304 /* golemWalk.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = golemWalk.atlas; path = Models/Golem/golemWalk.atlas; sourceTree = "<group>"; };
 		7F536E021C668D23004F5304 /* Golem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Golem.m; path = Models/Golem/Golem.m; sourceTree = "<group>"; };
 		7F536E051C668D46004F5304 /* Golem.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Golem.h; path = Models/Golem/Golem.h; sourceTree = "<group>"; };
+		7F536E061C669A1F004F5304 /* MenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuButton.h; path = CustomViews/MenuButton.h; sourceTree = "<group>"; };
+		7F536E081C669A55004F5304 /* MenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuButton.m; path = CustomViews/MenuButton.m; sourceTree = "<group>"; };
+		7F536E0A1C669E94004F5304 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
 		7F5C336B1C644EDD00875C83 /* duration.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = duration.wav; sourceTree = "<group>"; };
 		7F5C336C1C644EDD00875C83 /* mono16bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mono16bit.wav; sourceTree = "<group>"; };
 		7F5C336D1C644EDD00875C83 /* mono8bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mono8bit.wav; sourceTree = "<group>"; };
@@ -288,6 +293,15 @@
 			name = Golem;
 			sourceTree = "<group>";
 		};
+		7F536E071C669A35004F5304 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				7F536E061C669A1F004F5304 /* MenuButton.h */,
+				7F536E081C669A55004F5304 /* MenuButton.m */,
+			);
+			name = CustomViews;
+			sourceTree = "<group>";
+		};
 		7F5C33661C64382900875C83 /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +324,7 @@
 				7F5C336B1C644EDD00875C83 /* duration.wav */,
 				7F0522551C648AB500D46EE5 /* Hero.png */,
 				7F5C336F1C644EDD00875C83 /* stereo8bit.wav */,
+				7F536E0A1C669E94004F5304 /* menuButton.png */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -339,6 +354,7 @@
 		7FDEF7771C60D1A60030F4F3 /* SoA */ = {
 			isa = PBXGroup;
 			children = (
+				7F536E071C669A35004F5304 /* CustomViews */,
 				7F1855BC1C66187A00002168 /* skeleton */,
 				7F1855B41C66140400002168 /* Scenes */,
 				7F2F0F391C653CB0008B4078 /* ViewControllers */,
@@ -530,6 +546,7 @@
 				7FDEF7D21C60EA550030F4F3 /* Skysin_Cave.png in Resources */,
 				7F536E001C668D0C004F5304 /* golemIdle.atlas in Resources */,
 				7F536DFF1C668D0C004F5304 /* golemDie.atlas in Resources */,
+				7F536E0B1C669E94004F5304 /* menuButton.png in Resources */,
 				7FDEF7CB1C60EA550030F4F3 /* Clockwork_Dungeon_e.png in Resources */,
 				7FDEF7CC1C60EA550030F4F3 /* Clockwork_Dungeon.png in Resources */,
 				7FDEF7D51C60EA550030F4F3 /* ZARAM_ENTRY.png in Resources */,
@@ -591,6 +608,7 @@
 				7F1855B71C66146F00002168 /* MyScene.m in Sources */,
 				7F0522541C647DC900D46EE5 /* CameraManager.m in Sources */,
 				7F536E031C668D23004F5304 /* Golem.m in Sources */,
+				7F536E091C669A55004F5304 /* MenuButton.m in Sources */,
 				7F1855C61C661B9500002168 /* SoundEngine.m in Sources */,
 				7F1855B31C66129900002168 /* PlayViewController.m in Sources */,
 				7FDEF77A1C60D1A60030F4F3 /* main.m in Sources */,

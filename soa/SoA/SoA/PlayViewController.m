@@ -8,10 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+
 #import "PlayViewController.h"
+
 #import "MyScene.h"
 #import "Apis/Media/SoundEngine.h"
 #import "Engine/Engine.h"
+
 
 @implementation PlayViewController
 - (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
@@ -24,6 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     
     UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     [swipeRecognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];

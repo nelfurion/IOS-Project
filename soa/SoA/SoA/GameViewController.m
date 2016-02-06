@@ -9,6 +9,7 @@
 #import "GameViewController.h"
 #import "Models/Hero/Hero.h"
 
+#import "CustomViews/MenuButton.h"
 #import "Apis/Camera/CameraManager.h"
 
 @implementation GameViewController
@@ -42,6 +43,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    MenuButton *menuButton = [[MenuButton alloc] initWithFrame:CGRectMake(100, 100, 100, 20)];
+    [self.view addSubview:menuButton];
+    
     NSString *menuBackgroundPath = [[NSBundle mainBundle] pathForResource:@"menu_background.jpg" ofType:nil];
     
     UIImage *background = [UIImage imageWithContentsOfFile:menuBackgroundPath];
