@@ -31,9 +31,53 @@ static NSString *const HeroClassName = @"Hero";
         self.level = 1;
         self.health = HeroHealthPerLevel;
         self.attackPower = HeroInitialAttackPower;
+        self.isDirectionLeft = YES;
+        self.isCurrentlyMoving = NO;
+        self.isCurrentlyJumping = NO;
+        self.velocity = 10;
     }
     
     return self;
+}
+
+- (void) move {
+    CGPoint newPosition = CGPointMake(self.spriteNode.position.x + self.velocity, self.spriteNode.position.y);
+    
+    /*if (newPosition.y > 230) {
+        newPosition.y = 230;
+    }*/
+    self.spriteNode.position = newPosition;
+}
+
+- (void) jump {
+    if (!self.isCurrentlyJumping) {
+        self.isCurrentlyJumping = YES;
+        NSLog(@"jumping");
+        UIBezierPath *path = [UIBezierPath bezierPath];
+        [path moveToPoint:CGPointZero];
+        [path addQuadCurveToPoint: CGPointMake(
+                                               self.spriteNode.position.x + self.velocity / 4,
+                                               self.spriteNode.position.y + 25)
+         
+                     controlPoint:CGPointMake(
+                                              self.spriteNode.position.x + self.velocity / 2,
+                                              self.spriteNode.position.y + 50)];
+        
+        [path addQuadCurveToPoint:CGPointMake(
+                                              self.spriteNode.position.x + self.velocity  * (3 / 4),
+                                              self.spriteNode.position.y + 25)
+         
+                     controlPoint:CGPointMake(
+                                              self.spriteNode.position.x + self.velocity,
+                                              self.spriteNode.position.y)];
+        CGPathRef pathref = path.CGPath;
+        
+        Hero *curHero = self;
+        
+        [self.spriteNode runAction:[SKAction followPath:pathref duration:3] completion:^{
+            NSLog(@"jump ended");
+        }];
+    }
 }
 
 - (void) lvlUp {

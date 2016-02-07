@@ -10,7 +10,6 @@
 		7F0522541C647DC900D46EE5 /* CameraManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F0522531C647DC900D46EE5 /* CameraManager.m */; };
 		7F0522561C648AB500D46EE5 /* Hero.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F0522551C648AB500D46EE5 /* Hero.png */; };
 		7F1855B31C66129900002168 /* PlayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1855B21C66129900002168 /* PlayViewController.m */; };
-		7F1855B71C66146F00002168 /* MyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1855B61C66146F00002168 /* MyScene.m */; };
 		7F1855C61C661B9500002168 /* SoundEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F1855C51C661B9500002168 /* SoundEngine.m */; };
 		7F1855CA1C666D4700002168 /* heroAttack.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F1855C71C666D4700002168 /* heroAttack.atlas */; };
 		7F1855CB1C666D4700002168 /* heroIdle.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7F1855C81C666D4700002168 /* heroIdle.atlas */; };
@@ -28,6 +27,7 @@
 		7F536E031C668D23004F5304 /* Golem.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F536E021C668D23004F5304 /* Golem.m */; };
 		7F536E091C669A55004F5304 /* MenuButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F536E081C669A55004F5304 /* MenuButton.m */; };
 		7F536E0B1C669E94004F5304 /* menuButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 7F536E0A1C669E94004F5304 /* menuButton.png */; };
+		7F536E0D1C66CC8D004F5304 /* do_not_run.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7F536E0C1C66CC8D004F5304 /* do_not_run.mp3 */; };
 		7F5C33701C644EDD00875C83 /* duration.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336B1C644EDD00875C83 /* duration.wav */; };
 		7F5C33711C644EDD00875C83 /* mono16bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336C1C644EDD00875C83 /* mono16bit.wav */; };
 		7F5C33721C644EDD00875C83 /* mono8bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336D1C644EDD00875C83 /* mono8bit.wav */; };
@@ -84,8 +84,6 @@
 		7F0522551C648AB500D46EE5 /* Hero.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Hero.png; sourceTree = "<group>"; };
 		7F1855B11C66128C00002168 /* PlayViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PlayViewController.h; sourceTree = "<group>"; };
 		7F1855B21C66129900002168 /* PlayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlayViewController.m; sourceTree = "<group>"; };
-		7F1855B51C66144F00002168 /* MyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MyScene.h; sourceTree = "<group>"; };
-		7F1855B61C66146F00002168 /* MyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyScene.m; sourceTree = "<group>"; };
 		7F1855C41C661B9500002168 /* SoundEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SoundEngine.h; path = Apis/Media/SoundEngine.h; sourceTree = "<group>"; };
 		7F1855C51C661B9500002168 /* SoundEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SoundEngine.m; path = Apis/Media/SoundEngine.m; sourceTree = "<group>"; };
 		7F1855C71C666D4700002168 /* heroAttack.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; name = heroAttack.atlas; path = Models/Hero/heroAttack.atlas; sourceTree = "<group>"; };
@@ -109,6 +107,7 @@
 		7F536E061C669A1F004F5304 /* MenuButton.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MenuButton.h; path = CustomViews/MenuButton.h; sourceTree = "<group>"; };
 		7F536E081C669A55004F5304 /* MenuButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MenuButton.m; path = CustomViews/MenuButton.m; sourceTree = "<group>"; };
 		7F536E0A1C669E94004F5304 /* menuButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = menuButton.png; sourceTree = "<group>"; };
+		7F536E0C1C66CC8D004F5304 /* do_not_run.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = do_not_run.mp3; sourceTree = "<group>"; };
 		7F5C336B1C644EDD00875C83 /* duration.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = duration.wav; sourceTree = "<group>"; };
 		7F5C336C1C644EDD00875C83 /* mono16bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mono16bit.wav; sourceTree = "<group>"; };
 		7F5C336D1C644EDD00875C83 /* mono8bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = mono8bit.wav; sourceTree = "<group>"; };
@@ -196,15 +195,6 @@
 			name = Camera;
 			sourceTree = "<group>";
 		};
-		7F1855B41C66140400002168 /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				7F1855B51C66144F00002168 /* MyScene.h */,
-				7F1855B61C66146F00002168 /* MyScene.m */,
-			);
-			name = Scenes;
-			sourceTree = "<group>";
-		};
 		7F1855BC1C66187A00002168 /* skeleton */ = {
 			isa = PBXGroup;
 			children = (
@@ -232,8 +222,8 @@
 		7F2F0F2A1C64F086008B4078 /* Engine */ = {
 			isa = PBXGroup;
 			children = (
-				7F2F0F2B1C64F0A4008B4078 /* Engine.m */,
 				7F2F0F2D1C64F0B4008B4078 /* Engine.h */,
+				7F2F0F2B1C64F0A4008B4078 /* Engine.m */,
 			);
 			name = Engine;
 			sourceTree = "<group>";
@@ -314,6 +304,7 @@
 		7F5C336A1C644EDD00875C83 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				7F536E0C1C66CC8D004F5304 /* do_not_run.mp3 */,
 				7F2F0F2F1C64FDB9008B4078 /* temp */,
 				7F2F0F2E1C64FA72008B4078 /* levels */,
 				7F2F0F271C64EF46008B4078 /* images */,
@@ -356,7 +347,6 @@
 			children = (
 				7F536E071C669A35004F5304 /* CustomViews */,
 				7F1855BC1C66187A00002168 /* skeleton */,
-				7F1855B41C66140400002168 /* Scenes */,
 				7F2F0F391C653CB0008B4078 /* ViewControllers */,
 				7F2F0F2A1C64F086008B4078 /* Engine */,
 				7F0522501C647D6E00D46EE5 /* Apis */,
@@ -542,6 +532,7 @@
 				7F2F0F3B1C653CEE008B4078 /* duration.caf in Resources */,
 				7FDEF7CD1C60EA550030F4F3 /* Draagu_Cave.png in Resources */,
 				7FDEF78A1C60D1A60030F4F3 /* LaunchScreen.storyboard in Resources */,
+				7F536E0D1C66CC8D004F5304 /* do_not_run.mp3 in Resources */,
 				7F1855CC1C666D4700002168 /* heroWalk.atlas in Resources */,
 				7FDEF7D21C60EA550030F4F3 /* Skysin_Cave.png in Resources */,
 				7F536E001C668D0C004F5304 /* golemIdle.atlas in Resources */,
@@ -605,7 +596,6 @@
 				7F2F0F2C1C64F0A4008B4078 /* Engine.m in Sources */,
 				7FDEF7821C60D1A60030F4F3 /* GameViewController.m in Sources */,
 				7F619D5E1C6391EB00985595 /* MCSpriteLayer.m in Sources */,
-				7F1855B71C66146F00002168 /* MyScene.m in Sources */,
 				7F0522541C647DC900D46EE5 /* CameraManager.m in Sources */,
 				7F536E031C668D23004F5304 /* Golem.m in Sources */,
 				7F536E091C669A55004F5304 /* MenuButton.m in Sources */,

@@ -22,6 +22,10 @@
 @property (nonatomic) NSInteger width;
 @property (nonatomic) NSInteger height;
 @property (nonatomic) NSInteger level;
+@property (nonatomic) NSInteger velocity;
+@property (nonatomic) bool isDirectionLeft;
+@property (nonatomic) bool isCurrentlyMoving;
+@property (nonatomic) bool isCurrentlyJumping;
 
 @property (nonatomic) NSInteger health;
 @property (nonatomic) NSInteger attackPower;
@@ -37,9 +41,13 @@
 
 - (void) lvlUp;
 
+- (void) move;
+
 - (void) performActionWithFrames: (NSMutableArray*) frames;
 
 - (void) calculateVitals;
+
+- (void) jump;
 
 + (instancetype) heroWithDefaultSettings;
 

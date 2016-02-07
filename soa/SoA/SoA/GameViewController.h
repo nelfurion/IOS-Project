@@ -10,6 +10,7 @@
 
 @interface GameViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIButton *choosePhotoBtn;
+@property (weak, nonatomic) IBOutlet UIButton *btnStartGame;
 
 @property (weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
 

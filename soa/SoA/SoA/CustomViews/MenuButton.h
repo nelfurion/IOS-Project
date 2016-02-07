@@ -9,7 +9,7 @@
 #ifndef MenuButton_h
 #define MenuButton_h
 
-@interface MenuButton : UIView
+@interface MenuButton : UIButton
 
 @end
 

@@ -17,22 +17,25 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        NSString* imageName = [[NSBundle mainBundle] pathForResource:@"menuButton" ofType:@"png"];
-        UIButton *button = [[UIButton alloc] initWithFrame:frame];
-        //button.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:imageName]];
-        button.backgroundColor = [UIColor purpleColor];
-        [self addSubview:button];
+
+        UIImage* image = [UIImage imageNamed:@"menuButton.png"];
+        [self setTitle:@"Start" forState:UIControlStateNormal];
+        [self.titleLabel setNumberOfLines:0];
+        //[self setBackgroundImage:image forState:UIControlStateNormal];
+        
+        [self setBackgroundImage:image forState:UIControlStateNormal];
+        //[self addSubview:button];
     }
     return self;
 }
 
-- (void)drawRect:(CGRect)rect
+/*- (void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextSetLineWidth(context, 4.0);
     CGContextSetStrokeColorWithColor(context, [[UIColor blueColor] CGColor]);
-    CGContextAddRect(context, self.bounds);
+    CGContextAddRect(context, self.frame);
     CGContextStrokePath(context);
-}
+}*/
 
 @end

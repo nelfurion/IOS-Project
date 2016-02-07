@@ -11,24 +11,9 @@
 
 #import "CustomViews/MenuButton.h"
 #import "Apis/Camera/CameraManager.h"
+#import "Apis/Media/SoundEngine.h"
 
 @implementation GameViewController
-- (IBAction)pan:(UIPanGestureRecognizer *)sender {
-    NSLog(@"panned");
-}
-- (IBAction)screenEdgePan:(UIScreenEdgePanGestureRecognizer *)sender {
-    NSLog(@"screen edge pan");
-}
-- (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
-    NSLog(@"swiped");
-}
-- (IBAction)longPress:(UILongPressGestureRecognizer *)sender {
-    NSLog(@"long pressed");
-}
-- (IBAction)tap:(UITapGestureRecognizer *)sender {
-    NSLog(@"tapped");
-}
-
 
 - (IBAction)takePhoto:(id)sender {
     CameraManager *manager = [[CameraManager alloc] initWithController:self];
@@ -43,35 +28,30 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    MenuButton *menuButton = [[MenuButton alloc] initWithFrame:CGRectMake(100, 100, 100, 20)];
-    [self.view addSubview:menuButton];
+    //MenuButton *menuButton = [[MenuButton alloc] initWithFrame:CGRectMake(100, 100, 150, 150)];
+    //[self.view addSubview:menuButton];
     
-    NSString *menuBackgroundPath = [[NSBundle mainBundle] pathForResource:@"menu_background.jpg" ofType:nil];
+    /*SoundEngine* engine = [[SoundEngine alloc] init];
+    [engine bing];
+    [engine initOpenAL];
+    [engine playAudioFile];
+    NSLog(@"sound supposedly played");*/
     
-    UIImage *background = [UIImage imageWithContentsOfFile:menuBackgroundPath];
     
-    [self.backgroundImageView setImage:background];
-    
-    [self.view bringSubviewToFront:self.takePhotoBtn];
-    [self.view bringSubviewToFront:self.choosePhotoBtn];
+    [self.backgroundImageView setImage:[UIImage imageNamed:@"menu_background.jpg"]];
     
     UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
     //[swipeRecognizer setDelegate:self];
     [swipeRecognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
     [self.view addGestureRecognizer:swipeRecognizer];
-    
-    UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action: @selector(pan:)];
-    
-    [self.view addGestureRecognizer:panRecognizer];
-    
+    UIImage *buttonBackground = [UIImage imageNamed:@"menuButton"];
+    [self.takePhotoBtn setBackgroundImage:buttonBackground forState:UIControlStateNormal];
+    [self.choosePhotoBtn setBackgroundImage:buttonBackground forState:UIControlStateNormal];
+    [self.btnStartGame setBackgroundImage:buttonBackground forState:UIControlStateNormal];
     /*- (void) viewDidLoad {
      [super viewDidLoad];
      
-     SoundEngine* engine = [[SoundEngine alloc] init];
-     [engine bing];
-     [engine initOpenAL];
-     [engine playAudioFile];
-     NSLog(@"sound supposedly played");
+     
      
      Hero *hero = [Hero heroWithDefaultStats];
      CALayer *heroAnimationLayer = [hero Animate];
