@@ -21,6 +21,8 @@ static NSString *const GolemClassName = @"Golem";
         self.positionY = 0; //TODO: depends on level
         self.width = 50;
         self.height = 100;
+        self.health = 20;
+        self.attackPower = 5;
     }
     
     return self;

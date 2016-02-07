@@ -34,48 +34,87 @@ static NSString *const HeroClassName = @"Hero";
         self.isDirectionLeft = YES;
         self.isCurrentlyMoving = NO;
         self.isCurrentlyJumping = NO;
-        self.velocity = 10;
+        self.velocity = -10;
     }
     
     return self;
 }
 
-- (void) move {
-    CGPoint newPosition = CGPointMake(self.spriteNode.position.x + self.velocity, self.spriteNode.position.y);
+- (void) move: (BOOL) isMovingLeft {
+    if (!self.isCurrentlyMoving) {
+        if (self.isDirectionLeft != isMovingLeft) {
+            self.spriteNode.xScale = -self.spriteNode.xScale;
+            self.isDirectionLeft = !self.isDirectionLeft;
+            self.velocity = -self.velocity;
+        }
+        
+        [self.spriteNode runAction:[SKAction repeatActionForever:
+                                    [SKAction moveByX:self.velocity
+                                                    y:0 duration:0.1]]];
+        [self performActionWithFrames:self.walkFrames];
+        self.isCurrentlyMoving = YES;
+    } else {
+        [self.spriteNode removeAllActions];
+        self.isCurrentlyMoving = NO;
+        [self performActionWithFrames:self.idleFrames];
+    }
+}
+
+- (void) attack {
+    if (!self.isCurrentlyAttacking) {
+        self.isCurrentlyAttacking = YES;
+        [self.spriteNode runAction:[SKAction animateWithTextures:self.attackFrames
+                                                    timePerFrame:0.1f
+                                                          resize:NO
+                                                         restore:YES]
+                        completion: ^{
+                            self.isCurrentlyAttacking = NO;
+                            [self performActionWithFrames:self.idleFrames];
+                        }];
+    }
     
-    /*if (newPosition.y > 230) {
-        newPosition.y = 230;
-    }*/
-    self.spriteNode.position = newPosition;
+}
+
+- (void) dash: (UISwipeGestureRecognizerDirection) direction {
+    long dashVelocity = labs(self.velocity) * 15;
+    if (direction == UISwipeGestureRecognizerDirectionLeft) {
+        self.spriteNode.position = CGPointMake(self.spriteNode.position.x - dashVelocity, self.spriteNode.position.y);
+    } else if (direction == UISwipeGestureRecognizerDirectionRight) {
+        self.spriteNode.position = CGPointMake(self.spriteNode.position.x + dashVelocity, self.spriteNode.position.y);
+    }
 }
 
 - (void) jump {
     if (!self.isCurrentlyJumping) {
         self.isCurrentlyJumping = YES;
         NSLog(@"jumping");
+        
         UIBezierPath *path = [UIBezierPath bezierPath];
         [path moveToPoint:CGPointZero];
         [path addQuadCurveToPoint: CGPointMake(
                                                self.spriteNode.position.x + self.velocity / 4,
-                                               self.spriteNode.position.y + 25)
+                                               self.spriteNode.position.y + 5)
          
                      controlPoint:CGPointMake(
                                               self.spriteNode.position.x + self.velocity / 2,
-                                              self.spriteNode.position.y + 50)];
+                                              self.spriteNode.position.y + 10)];
         
         [path addQuadCurveToPoint:CGPointMake(
                                               self.spriteNode.position.x + self.velocity  * (3 / 4),
-                                              self.spriteNode.position.y + 25)
+                                              self.spriteNode.position.y + 5)
          
                      controlPoint:CGPointMake(
                                               self.spriteNode.position.x + self.velocity,
                                               self.spriteNode.position.y)];
         CGPathRef pathref = path.CGPath;
         
-        Hero *curHero = self;
         
-        [self.spriteNode runAction:[SKAction followPath:pathref duration:3] completion:^{
+        
+        [self.spriteNode runAction:[SKAction followPath:pathref duration:0.2] completion:^{
             NSLog(@"jump ended");
+            [self setIsCurrentlyJumping:NO];
+            self.spriteNode.zRotation = 0;
+            [self performActionWithFrames:self.idleFrames];
         }];
     }
 }
@@ -102,19 +141,21 @@ static NSString *const HeroClassName = @"Hero";
 
 - (instancetype) initWithAnimationsData {
     self = [self init];
-    self.idleFrames = [self createAnimationFrames: @"heroIdle"];
-    self.walkFrames = [self createAnimationFrames: @"heroWalk"];
-    self.attackFrames = [self createAnimationFrames: @"heroAttack"];
-    
-    //Create hero sprite
-    SKTexture *temp = self.idleFrames[0];
-    self.spriteNode = [SKSpriteNode spriteNodeWithTexture:temp];
-    
-    [self.spriteNode setScale:0.3];
-    SKPhysicsBody *body = [SKPhysicsBody bodyWithTexture:self.idleFrames[0] size:self.spriteNode.size];
-    self.spriteNode.physicsBody = body;
-    
-    //[self stayIdle];
+    if (self) {
+        self.idleFrames = [self createAnimationFrames: @"heroIdle"];
+        self.walkFrames = [self createAnimationFrames: @"heroWalk"];
+        self.attackFrames = [self createAnimationFrames: @"heroAttack"];
+        
+        //Create hero sprite
+        SKTexture *temp = self.idleFrames[0];
+        self.spriteNode = [SKSpriteNode spriteNodeWithTexture:temp];
+        
+        [self.spriteNode setScale:0.3];
+        SKPhysicsBody *body = [SKPhysicsBody bodyWithTexture:self.idleFrames[0] size:self.spriteNode.size];
+        self.spriteNode.physicsBody = body;
+        
+        self.spriteNode.physicsBody.allowsRotation = NO;
+    }
     
     return self;
 }

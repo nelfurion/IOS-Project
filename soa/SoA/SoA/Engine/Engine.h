@@ -12,20 +12,23 @@
 #import <AVFoundation/AVFoundation.h>
 
 #import <UIKit/UIKit.h>
-#import "../Models/Hero/Hero.h";
+#import "../Models/Hero/Hero.h"
 
 static Hero *hero;
 static AVAudioPlayer *avAudioPlayer;
+static NSMutableArray *entities;
 
 @interface Engine : NSObject
 
-+ (void) handleMoveLeft;
++ (void) handleMove: (BOOL) isMovingLeft;
 
 + (void) handleJump;
 
-+ (void) handleMoveRight;
++ (void) handleSwipe: (UISwipeGestureRecognizerDirection) direction;
 
 + (void) start: (UIView*) view;
+
++ (void) handleAttack;
 
 @end
 

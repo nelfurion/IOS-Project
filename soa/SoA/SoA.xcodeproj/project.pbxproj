@@ -34,6 +34,7 @@
 		7F5C33731C644EDD00875C83 /* stereo16bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336E1C644EDD00875C83 /* stereo16bit.wav */; };
 		7F5C33741C644EDD00875C83 /* stereo8bit.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7F5C336F1C644EDD00875C83 /* stereo8bit.wav */; };
 		7F619D5E1C6391EB00985595 /* MCSpriteLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F619D5D1C6391EB00985595 /* MCSpriteLayer.m */; };
+		7F83F7DA1C67D9EA00186421 /* Enitty.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F83F7D91C67D9EA00186421 /* Enitty.m */; };
 		7FA6024D1C6609AE00B955C1 /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7FA6024C1C6609AE00B955C1 /* SpriteKit.framework */; };
 		7FDEF77A1C60D1A60030F4F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF7791C60D1A60030F4F3 /* main.m */; };
 		7FDEF77D1C60D1A60030F4F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FDEF77C1C60D1A60030F4F3 /* AppDelegate.m */; };
@@ -115,6 +116,9 @@
 		7F5C336F1C644EDD00875C83 /* stereo8bit.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = stereo8bit.wav; sourceTree = "<group>"; };
 		7F619D5C1C6391A500985595 /* MCSpriteLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MCSpriteLayer.h; sourceTree = "<group>"; };
 		7F619D5D1C6391EB00985595 /* MCSpriteLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MCSpriteLayer.m; sourceTree = "<group>"; };
+		7F8099B91C67912B007C17DB /* Direction.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Direction.h; path = Models/Direction.h; sourceTree = "<group>"; };
+		7F83F7D81C67D6A700186421 /* Entity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Entity.h; path = Models/Entity.h; sourceTree = "<group>"; };
+		7F83F7D91C67D9EA00186421 /* Enitty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Enitty.m; path = Models/Enitty.m; sourceTree = "<group>"; };
 		7FA6024C1C6609AE00B955C1 /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
 		7FDEF7751C60D1A60030F4F3 /* SoA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SoA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FDEF7791C60D1A60030F4F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -400,6 +404,8 @@
 		7FDEF7D81C60F5230030F4F3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7F83F7D81C67D6A700186421 /* Entity.h */,
+				7F83F7D91C67D9EA00186421 /* Enitty.m */,
 				7F536DF71C668C87004F5304 /* Golem */,
 				7F1A24391C62AAB400E096ED /* Contracts */,
 				7FDEF7DB1C60F5950030F4F3 /* Hero */,
@@ -417,6 +423,7 @@
 				7F1855C81C666D4700002168 /* heroIdle.atlas */,
 				7FDEF7DA1C60F58E0030F4F3 /* Hero.h */,
 				7F1A243C1C62B91000E096ED /* Hero.m */,
+				7F8099B91C67912B007C17DB /* Direction.h */,
 			);
 			name = Hero;
 			sourceTree = "<group>";
@@ -591,6 +598,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F83F7DA1C67D9EA00186421 /* Enitty.m in Sources */,
 				7F1A243D1C62B91000E096ED /* Hero.m in Sources */,
 				7FDEF77D1C60D1A60030F4F3 /* AppDelegate.m in Sources */,
 				7F2F0F2C1C64F0A4008B4078 /* Engine.m in Sources */,

@@ -13,44 +13,70 @@
 
 #import "Apis/Media/SoundEngine.h"
 #import "Engine/Engine.h"
+#import "Models/Direction.h"
 
 
 @implementation PlayViewController
-- (IBAction)swipe:(UISwipeGestureRecognizer *)sender {
-    NSLog(@"swiped");
+- (void)swipe:(UISwipeGestureRecognizer *)sender {
+    NSLog(@"dashed");
+    [Engine handleSwipe: sender.direction];
 }
-- (IBAction)pan:(UIPanGestureRecognizer *)sender {
+
+- (void)pan:(UIPanGestureRecognizer *)sender {
     [Engine handleJump];
 }
 
-- (IBAction)moveLeft:(id)sender {
-    [Engine handleJump];
-    //[Engine handleMoveLeft];
+- (void)moveLeft:(UILongPressGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateBegan
+        || sender.state == UIGestureRecognizerStateEnded) {
+        [Engine handleMove:YES];
+    }
 }
 
-- (IBAction)moveRight:(id)sender {
-    [Engine handleMoveRight];
+- (void)moveRight:(UILongPressGestureRecognizer*)sender {
+    if (sender.state == UIGestureRecognizerStateBegan
+        || sender.state == UIGestureRecognizerStateEnded) {
+        [Engine handleMove:NO];
+    }
+}
+
+- (void)tap:(UITapGestureRecognizer*) sender {
+    [Engine handleAttack];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self.btnMoveLeft removeTarget:nil
+                       action:NULL
+             forControlEvents:UIControlEventAllEvents];
+    [self.btnMoveRight removeTarget:nil
+                       action:NULL
+             forControlEvents:UIControlEventAllEvents];
     [Engine start:self.view];
     
-    UISwipeGestureRecognizer *swipeRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
-    [swipeRecognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
-    [self.view addGestureRecognizer:swipeRecognizer];
+    UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap:)];
+    [self.btnAttack addGestureRecognizer:tapRecognizer];
+    
+    UISwipeGestureRecognizer *swipeLeftRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    [swipeLeftRecognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+    [self.view addGestureRecognizer:swipeLeftRecognizer];
+    
+    UISwipeGestureRecognizer *swipeRightRecognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(swipe:)];
+    [swipeRightRecognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
+    [self.view addGestureRecognizer:swipeRightRecognizer];
     
     UIPanGestureRecognizer *panRecognizer = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(pan:)];
 
+    [panRecognizer requireGestureRecognizerToFail:swipeRightRecognizer];
+    [panRecognizer requireGestureRecognizerToFail:swipeLeftRecognizer];
     [self.view addGestureRecognizer:panRecognizer];
     
-    //[Engine start];
+    UILongPressGestureRecognizer *longPressLeftRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(moveLeft:)];
+    [self.btnMoveLeft addGestureRecognizer:longPressLeftRecognizer];
     
-    //[self startGame];
-    
-        
-    // Configure the view.
+    UILongPressGestureRecognizer *longPressRightRecognizer = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(moveRight:)];
+    [self.btnMoveRight addGestureRecognizer:longPressRightRecognizer];
 }
 
 - (BOOL)shouldAutorotate

@@ -18,7 +18,7 @@
 @implementation  Engine
 
 + (void) start: (UIView*) view {
-    
+    entities = [NSMutableArray array];
     NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"do_not_run" ofType:@"mp3"];
     NSData *sampleData = [[NSData alloc] initWithContentsOfFile:soundFilePath];
     
@@ -27,7 +27,6 @@
                                             initWithData:sampleData error:&error];
     [avAudioPlayer prepareToPlay];
     [avAudioPlayer play];
-
     
     SKView * skView = (SKView *)view;
     skView.showsFPS = YES;
@@ -36,6 +35,7 @@
     // Create and configure the scene.
     SKScene *scene = [SKScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
+
     
     // Present the scene.
     [skView presentScene:scene];
@@ -55,49 +55,50 @@
     hero.spriteNode.position = CGPointMake(CGRectGetMidX(scene.frame), CGRectGetMaxY(scene.frame) - hero.spriteNode.size.height / 2);
     [scene addChild:hero.spriteNode];
     
-    //Start the bear walking
-    //[self walkingBear];
-    
     [hero performActionWithFrames:hero.idleFrames];
+    
+    
+    //TODO:
+    //The entities should first be loaded in the array, and then placed on the scene from the array.
     
     Golem *golem = [Golem golemWithDefaultSettings];
     golem.spriteNode.position = CGPointMake(CGRectGetMidX(scene.frame) + 100, CGRectGetMaxY(scene.frame) - hero.spriteNode.size.height / 2);
     [scene addChild:golem.spriteNode];
+    [entities addObject:golem];
     [golem performActionWithFrames:golem.attackFrames];
 }
 
-+ (void) handleMoveLeft {
-    if (!hero.isDirectionLeft) {
-        hero.spriteNode.xScale = hero.spriteNode.xScale * -1;
-        hero.isDirectionLeft = YES;
-        hero.velocity = -10;
++ (void) handleMove: (BOOL) isMovingLeft {
+    [hero move:isMovingLeft];
+}
+
++ (void) handleAttack {
+    [hero attack];
+    NSLog(@"entities count: %ld", (long)entities.count);
+    for(int i = 0; i < entities.count; i++) {
+        NSLog(@"here");
+        Entity *entity = [entities objectAtIndex:i];
+        int deltaX = hero.spriteNode.position.x - entity.spriteNode.position.x;
+        NSLog(@"%d", deltaX);
+        if (hero.isDirectionLeft &&
+            (deltaX > 0 && deltaX <= 150)) {
+            entity.health -= hero.attackPower;
+            if (entity.health <= 0) {
+                [entity.spriteNode removeFromParent];
+                [entities removeObjectAtIndex:i];
+            }
+            NSLog(@"ENTITY HIT!");
+            NSLog(@"%ld", (long)entity.health);
+        }
     }
-    
-    if (!hero.isCurrentlyMoving) {
-        [hero performActionWithFrames:hero.walkFrames];
-        hero.isCurrentlyMoving = YES;
-    }
-    
-    [hero move];
 }
 
 + (void) handleJump {
     [hero jump];
 }
 
-+ (void) handleMoveRight {
-    if (hero.isDirectionLeft) {
-        hero.spriteNode.xScale = hero.spriteNode.xScale * -1;
-        hero.isDirectionLeft = NO;
-        hero.velocity = 10;
-    }
-    
-    if (!hero.isCurrentlyMoving) {
-        [hero performActionWithFrames:hero.walkFrames];
-        hero.isCurrentlyMoving = YES;
-    }
-    
-    [hero move];
++ (void) handleSwipe: (UISwipeGestureRecognizerDirection) direction {
+    [hero dash:direction];
 }
 
 @end

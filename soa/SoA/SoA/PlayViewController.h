@@ -12,6 +12,9 @@
 #import <UIKit/UIKit.h>
 
 @interface PlayViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UIButton *btnMoveLeft;
+@property (weak, nonatomic) IBOutlet UIButton *btnMoveRight;
+@property (weak, nonatomic) IBOutlet UIButton *btnAttack;
 @property (nonatomic) SKScene *scene;
 @end
 
