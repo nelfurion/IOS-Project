@@ -11,6 +11,9 @@
 #import "Engine.h"
 #import "../Models/Hero/Hero.h"
 #import "../Models/Golem/Golem.h"
+#import "../Apis/Media/SoundEngine.h"
+#import "../CustomViews/CustomButton.h"
+#import "../AlertController.h"
 
 
 @class LevelManager;
@@ -19,14 +22,8 @@
 
 + (void) start: (UIView*) view {
     entities = [NSMutableArray array];
-    NSString *soundFilePath = [[NSBundle mainBundle] pathForResource:@"do_not_run" ofType:@"mp3"];
-    NSData *sampleData = [[NSData alloc] initWithContentsOfFile:soundFilePath];
+   
     
-    NSError *error;
-    avAudioPlayer = [[AVAudioPlayer alloc]
-                                            initWithData:sampleData error:&error];
-    [avAudioPlayer prepareToPlay];
-    [avAudioPlayer play];
     
     SKView * skView = (SKView *)view;
     skView.showsFPS = YES;
@@ -58,14 +55,17 @@
     [hero performActionWithFrames:hero.idleFrames];
     
     
-    //TODO:
-    //The entities should first be loaded in the array, and then placed on the scene from the array.
-    
     Golem *golem = [Golem golemWithDefaultSettings];
     golem.spriteNode.position = CGPointMake(CGRectGetMidX(scene.frame) + 100, CGRectGetMaxY(scene.frame) - hero.spriteNode.size.height / 2);
     [scene addChild:golem.spriteNode];
     [entities addObject:golem];
-    [golem performActionWithFrames:golem.attackFrames];
+    
+    [golem performActionWithFrames:golem.idleFrames];
+    /*dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        [golem watchOutForTarget:hero];
+    });*/
+    
+    
 }
 
 + (void) handleMove: (BOOL) isMovingLeft {
@@ -80,17 +80,39 @@
         Entity *entity = [entities objectAtIndex:i];
         int deltaX = hero.spriteNode.position.x - entity.spriteNode.position.x;
         NSLog(@"%d", deltaX);
-        if (hero.isDirectionLeft &&
-            (deltaX > 0 && deltaX <= 150)) {
+        if ((hero.isDirectionLeft && (deltaX > 0 && deltaX <= 150)) ||
+            (!hero.isDirectionLeft && (deltaX <= 0 && deltaX >= -150))) {
             entity.health -= hero.attackPower;
+            [entity performActionWithFrames:entity.attackFrames];
+            hero.health -= entity.attackPower;
             if (entity.health <= 0) {
                 [entity.spriteNode removeFromParent];
                 [entities removeObjectAtIndex:i];
+                if (entities.count == 0) {
+                    [self win];
+                }
             }
+            
+            if (hero.health <= 0) {
+                [hero.spriteNode removeFromParent];
+                [self lose];
+            }
+            
             NSLog(@"ENTITY HIT!");
-            NSLog(@"%ld", (long)entity.health);
+            NSLog(@"ENTITY HEALTH: %ld", (long)entity.health);
+            
+            NSLog(@"HERO HIT!");
+            NSLog(@"HERO HEALTH: %ld", (long)hero.health);
         }
     }
+}
+
++ (void) lose {
+    [AlertController alert:@"WASTED" message:@"You dead."];
+}
+
++ (void) win {
+    [AlertController alert:@"Good job!" message:@"Nice moves."];
 }
 
 + (void) handleJump {

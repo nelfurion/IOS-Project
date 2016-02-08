@@ -23,6 +23,9 @@ static NSString *const GolemClassName = @"Golem";
         self.height = 100;
         self.health = 20;
         self.attackPower = 5;
+        self.isDirectionLeft = YES;
+        self.isCurrentlyAttacking = NO;
+        self.isCurrentlyIdle = NO;
     }
     
     return self;
@@ -33,6 +36,45 @@ static NSString *const GolemClassName = @"Golem";
                                                                               timePerFrame:0.1f
                                                                                     resize:NO
                                                                                    restore:YES]] withKey:@"golemAnimation"];
+}
+
+- (void) watchOutForTarget: (Entity*) entity {
+    SKAction *handleTarget = [SKAction runBlock:^{
+        NSLog(@"here");
+        long deltaX = self.spriteNode.position.x - entity.spriteNode.position.x;
+        if (deltaX <= 150 && deltaX > 0) {
+            if (!self.isDirectionLeft) {
+                self.spriteNode.xScale = -self.spriteNode.xScale;
+                self.isDirectionLeft = YES;
+            }
+            
+            if (!self.isCurrentlyAttacking) {
+                [self performActionWithFrames:self.attackFrames];
+                entity.health -= self.attackPower;
+            }
+            
+            self.isCurrentlyIdle = NO;
+        } else if (deltaX >= -150 && deltaX <= 0) {
+            if (self.isDirectionLeft) {
+                self.spriteNode.xScale = -self.spriteNode.xScale;
+                self.isDirectionLeft = NO;
+            }
+            
+            if (!self.isCurrentlyAttacking) {
+                [self performActionWithFrames:self.attackFrames];
+                entity.health -= self.attackPower;
+            }
+            
+            self.isCurrentlyIdle = NO;
+        } else {
+            if (!self.isCurrentlyIdle) {
+                [self performActionWithFrames:self.idleFrames];
+                self.isCurrentlyIdle = YES;
+            }
+        }
+    }];
+    
+    [self.spriteNode runAction:[SKAction repeatActionForever:handleTarget] withKey:@"golemAnimation1"];
 }
 
 - (instancetype) initWithAnimationsData {

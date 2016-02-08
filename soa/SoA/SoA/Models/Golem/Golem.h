@@ -11,30 +11,19 @@
 
 #import "../Contracts/Animatable.h"
 #import <SpriteKit/SpriteKit.h>
+#import "../Entity.h"
 
-@interface Golem : NSObject
+@interface Golem : Entity
 
-@property (nonatomic) NSInteger positionX;
-@property (nonatomic) NSInteger positionY;
-@property (nonatomic) NSInteger width;
-@property (nonatomic) NSInteger height;
-
-@property (nonatomic) NSInteger health;
-@property (nonatomic) NSInteger attackPower;
-
-@property (strong, nonatomic) NSMutableArray* idleFrames;
-@property (strong, nonatomic) NSMutableArray* walkFrames;
-@property (strong, nonatomic) NSMutableArray* attackFrames;
-@property (strong, nonatomic) SKSpriteNode* spriteNode;
-
-- (instancetype) init;
-
-- (instancetype) initWithAnimationsData;
-
-- (void) performActionWithFrames: (NSMutableArray*) frames;
+@property (nonatomic) BOOL isDirectionLeft;
+@property (nonatomic) BOOL isCurrentlyAttacking;
+@property (nonatomic) BOOL isCurrentlyIdle;
 
 + (instancetype) golemWithDefaultSettings;
 
+- (void) watchOutForTarget: (Entity*) entity;
+
+- (void) performActionWithFrames: (NSMutableArray*) frames;
 @end
 
 #endif /* Golem_h */

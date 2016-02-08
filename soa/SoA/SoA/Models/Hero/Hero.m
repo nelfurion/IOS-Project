@@ -78,9 +78,17 @@ static NSString *const HeroClassName = @"Hero";
 - (void) dash: (UISwipeGestureRecognizerDirection) direction {
     long dashVelocity = labs(self.velocity) * 15;
     if (direction == UISwipeGestureRecognizerDirectionLeft) {
+        if (!self.isDirectionLeft) {
+            self.isDirectionLeft = YES;
+            self.spriteNode.xScale = -self.spriteNode.xScale;
+        }
         self.spriteNode.position = CGPointMake(self.spriteNode.position.x - dashVelocity, self.spriteNode.position.y);
     } else if (direction == UISwipeGestureRecognizerDirectionRight) {
         self.spriteNode.position = CGPointMake(self.spriteNode.position.x + dashVelocity, self.spriteNode.position.y);
+        if (self.isDirectionLeft) {
+            self.isDirectionLeft = NO;
+            self.spriteNode.xScale = -self.spriteNode.xScale;
+        }
     }
 }
 

@@ -9,21 +9,17 @@
 #ifndef SoundEngine_h
 #define SoundEngine_h
 
-#import <OpenAl/al.h>
-#import <OpenAl/alc.h>
-#include <AudioToolbox/AudioToolbox.h>
+#import <AVFoundation/AVFoundation.h>
 
-@interface SoundEngine : NSObject 
+@interface SoundEngine : NSObject
 
-@property (nonatomic) ALCcontext* context;
-@property (nonatomic) ALCdevice* device;
-@property (nonatomic) NSMutableArray * bufferStorageArray;
-@property (nonatomic) NSMutableDictionary* soundDictionary;
+@property (strong, nonatomic) AVAudioPlayer* player;
 
 - (id) init;
-- (void) initOpenAL;
-- (void) playAudioFile;
-- (void) bing;
+
+- (void) play: (NSString*) fileName type: (NSString*) type;
+
+- (void) toggle;
 
 @end
 

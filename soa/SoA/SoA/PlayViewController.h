@@ -11,11 +11,12 @@
 
 #import <UIKit/UIKit.h>
 
+#import "CustomViews/CustomButton.h"
+
 @interface PlayViewController : UIViewController
-@property (weak, nonatomic) IBOutlet UIButton *btnMoveLeft;
-@property (weak, nonatomic) IBOutlet UIButton *btnMoveRight;
-@property (weak, nonatomic) IBOutlet UIButton *btnAttack;
+@property (strong, nonatomic) CustomButton *soundButton;
 @property (nonatomic) SKScene *scene;
+@property (nonatomic) BOOL soundIsPlaying;
 @end
 
 #endif /* PlayViewController_h */

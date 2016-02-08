@@ -8,13 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GameViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
-@property (weak, nonatomic) IBOutlet UIButton *choosePhotoBtn;
+@interface GameViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UIButton *btnStartGame;
-
-@property (weak, nonatomic) IBOutlet UIButton *takePhotoBtn;
-
-@property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet UIButton *btnExit;
+@property (weak, nonatomic) IBOutlet UIButton *btnStats;
 
 @property (strong, nonatomic) IBOutlet UIImageView *backgroundImageView;
 @end
